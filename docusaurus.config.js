@@ -16,7 +16,7 @@ require('dotenv').config()
 const config = {
   title: 'Umut Hope YILDIRIM',
   tagline: 'My Portfolio Website',
-  url: 'https://umutyildirim.com',
+  url: 'https://portfolio-umut-yildirim.web.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -34,15 +34,6 @@ const config = {
         enabled: true,
         verbose: false,
         personalAccessToken: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
-      },
-    ],
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-        ignorePatterns: ['/tags/**'],
-        filename: 'sitemap.xml',
       },
     ],
   ],
@@ -68,7 +59,17 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {},
       }),
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
+      },
     ],
   ],
 
