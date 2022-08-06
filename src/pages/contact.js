@@ -70,7 +70,7 @@
      <Layout
        title={`Contact Me`}
        description="Description will go into a meta tag in <head />">
-       <header className={clsx('hero hero--primary', styles.heroBanner)}>
+       <header className={clsx('hero hero--primary', styles.heroBanner, 'heroBannerContact')}>
          <div className="container">
            <h1 className="hero__title">Contact Me</h1>
            <p className="hero__subtitle">{siteConfig.tagline}</p>
