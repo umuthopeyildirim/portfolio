@@ -79,10 +79,19 @@ const config = {
       },
     ],
   ],
-
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        respectPrefersColorScheme: true,
+      },
+      algolia: {
+          appId: "KRR9VEUPCT",
+          apiKey: "cd0188125dcd31fb4b011b5e536d963a",
+          indexName: "refine",
+          contextualSearch: true,
+      },
       metadata: [{name: 'keywords', content: 'Umut YILDIRIM, Umut Hope YILDIRIM, Umut, Hope, Yildirim, Portfolio, Blog, Gists, Tutorials, Projects, About'}],
       navbar: {
         logo: {
@@ -99,14 +108,19 @@ const config = {
             position: 'left' 
           },
           {
+            to: 'projects',
+            label: 'Projects',
+            position: 'left',
+          },
+          {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Tutorials',
           },
           {
             to: 'blog', 
-            label: 'Blog', 
+            label: 'Blogs', 
             position: 'left'
           },
           {
@@ -135,70 +149,79 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
-            title: 'Learn',
+            title: 'Support me',
             items: [
               {
-                label: 'Style Guide',
-                to: 'docs/',
+                html: '<a target="_blank" href="https://www.buymeacoffee.com/hope"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=hope&button_colour=215fc5&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>',
               },
-              {
-                label: 'Second Doc',
-                to: 'docs/doc2',
-              },
+              // {
+              //   html: `<div style="display: flex; align-items: center;"><iframe src="https://github.com/sponsors/johnnyreilly/button" title="Sponsor johnnyreilly" height="35" width="116" style="border: 0;"></iframe><div>&nbsp;on GitHub</div></div>`,
+              // },
             ],
           },
           {
-            title: 'Community',
+            title: 'Discover',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Projects',
+                to: 'projects',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
               {
                 label: 'Blog',
                 to: 'blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Tutorials',
+                to: 'docs/intro',
+              },
+              {
+                label: 'Gists',
+                to: 'gists',
               },
             ],
           },
           {
-            title: 'Legal',
-            // Please do not remove the privacy and terms, it's a legal requirement.
+            title: 'Get To Know Me',
             items: [
               {
-                label: 'Privacy',
-                href: 'https://opensource.fb.com/legal/privacy/',
+                label: 'About Me',
+                to: 'about',
               },
               {
-                label: 'Terms',
-                href: 'https://opensource.fb.com/legal/terms/',
+                label: 'Contact Me',
+                to: 'contact',
               },
               {
-                label: 'Data Policy',
-                href: 'https://opensource.fb.com/legal/data-policy/',
+                label: 'My Resume',
+                href: 'https://umutyildirim.com/download/resume.pdf',
               },
               {
-                label: 'Cookie Policy',
-                href: 'https://opensource.fb.com/legal/cookie-policy/',
+                label: 'My CV',
+                href: 'https://umutyildirim.com/download/cv.pdf',
+              },
+            ],
+          },
+          {
+            title: 'Social Media',
+            items: [
+              {
+                label: 'Digital Garden',
+                href: 'https://garden.umutyildirim.com/',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/HopeSweaty',
+              },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/umuthopeyildirim/',
+              },
+              {
+                label: 'Instagram',
+                href: 'https://www.instagram.com/umuthopeyildirim/',
               },
             ],
           },

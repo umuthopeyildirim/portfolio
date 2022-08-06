@@ -41,6 +41,11 @@
   opacity: 0.6;
 }
 
+.navbar{
+  border-bottom: 4px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right, #3a78de, #6696e6) 1;
+}
 .header-github-link:before {
   content: '';
   width: 24px;
@@ -103,4 +108,12 @@ html[data-theme='dark'] .header-github-link:before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Footer */
+
+.footer{
+  border-top: 4px;
+  border-top-style: solid;
+  border-image: linear-gradient(to right, #3a78de, #6696e6) 1;
 }
