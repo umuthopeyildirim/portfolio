@@ -35,10 +35,12 @@ const config = {
         verbose: false,
         personalAccessToken: process.env.GH_PERSONAL_ACCESS_TOKEN,
       },
+    ],
+    [
       '@docusaurus/plugin-google-gtag',
       {
         trackingID: 'G-RTD554CXLK',
-        anonymizeIP: true,
+        anonymizeIP: false,
       },
     ],
   ],
