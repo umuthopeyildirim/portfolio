@@ -18,8 +18,8 @@ const config = {
   tagline: 'My Portfolio Website',
   url: 'https://portfolio-umut-yildirim.web.app',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'log',
+  onBrokenMarkdownLinks: 'log',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
