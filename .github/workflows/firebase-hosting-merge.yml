@@ -2,6 +2,8 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
+env:
+  GH_PERSONAL_ACCESS_TOKEN: '${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}'
 'on':
   push:
     branches:
