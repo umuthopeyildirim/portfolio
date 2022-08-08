@@ -48,6 +48,15 @@ const features = [
   },
 ];
 
+function Server(props) {
+	return (
+		<div className={styles.icon__wrapper}>
+			<img src={props.src} alt={props.name} title={props.name} className={styles.icon}/>
+			{ props.partner && <Partner/> }
+		</div>
+	)
+}
+
 function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
@@ -70,7 +79,12 @@ export default function Home() {
     <Layout
       title={`Home`}
       description="Description will go into a meta tag in <head />">
-      <header className={clsx('hero hero--primary', styles.heroBanner, 'heroBannerIndex')}>
+      <header
+        className={clsx(
+          'hero hero--primary',
+          styles.heroBanner,
+          'heroBannerIndex',
+        )}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -86,11 +100,21 @@ export default function Home() {
           </div>
         </div>
       </header>
+      <section className={styles.servers_wrapper}>
+        <h2>Projects</h2>
+        <div className={styles.servers}>
+          <Server name="Pothole Finder" src="img/docusaurus.png"/>
+          <Server name="Pothole Finder" src="img/docusaurus.png"/>
+          <Server name="Pothole Finder" src="img/docusaurus.png"/>
+          <Server name="Pothole Finder" src="img/docusaurus.png"/>
+          <Server name="Pothole Finder" src="img/docusaurus.png"/>
+        </div>
+      </section>
       <main>
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
-              <div className="row">
+              <div className="row text--center">
                 {features.map(({title, imageUrl, description}) => (
                   <Feature
                     key={title}

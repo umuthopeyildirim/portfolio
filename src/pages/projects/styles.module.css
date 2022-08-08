@@ -1,0 +1,105 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+:global(.card__image) {
+  height: 164px;
+  overflow: hidden;
+  background-color: var(--ifm-color-primary);
+}
+
+:global(.card__image) h2 {
+  display: inline-block;
+  margin: 12px;
+}
+h3 {
+  color: var(--ifm-link-color);
+  display: inline-block;
+  margin: 12px;
+}
+.projectPageHeader {
+  /* background-color: var(--ifm-color-secondary-darkest);
+  color: var(--ifm-color-secondary-lighter); */
+  display: block;
+  overflow: hidden;
+  padding: 1rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.projectPageHeader h2 {
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.projectBody {
+  /* background-color: var(--ifm-background-color);
+  color: var(--ifm-color-secondary-lightest); */
+  padding: 3.6rem 0;
+}
+
+.projectCard {
+  /* background-color: var(--ifm-color-secondary-darkest); */
+  border-radius: 5px;
+  border-style: solid;
+  border-color: var(--ifm-color-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projectItem {
+  margin: 0 auto;
+  max-width: 512px;
+  text-align: left;
+}
+
+.projectItem h1 {
+  font-size: 2.4rem;
+}
+
+.projectItem h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.projectItem ul {
+  list-style: none outside;
+  margin: 0;
+  padding: 8px;
+  text-align: left;
+}
+
+.projectItem li {
+  margin-bottom: 8px;
+}
+
+.projectItem svg {
+  margin-right: 4px;
+  max-width: 12px;
+}
+
+.projectItemButton {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+}
+
+.projectItemBackButton {
+  margin: 1rem 0;
+}
+
+.directory {
+  border-top: 4px;
+  border-top-style: solid;
+  border-image: linear-gradient(to right, #3a78de, #6696e6) 1;
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-color-secondary-lightest);
+  padding: 3.6rem 0.4rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 966px) {
+  .projectItemBackButton {
+    font-size: 1rem;
+  }
+}
