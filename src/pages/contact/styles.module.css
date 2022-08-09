@@ -176,7 +176,7 @@
     width: 100%;
 }
 
-button {
+.thisButton {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;

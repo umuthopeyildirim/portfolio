@@ -72,7 +72,7 @@ export function ContactForm() {
                                     field="message"
                                     errors={state.errors}
                                 />
-                                <button type="submit" disabled={state.submitting}>
+                                <button className={styles.thisButton} type="submit" disabled={state.submitting}>
                                     Submit
                                 </button>
                                 </form>
