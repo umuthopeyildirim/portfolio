@@ -1,0 +1,13 @@
+{
+    "forms": {
+        "contactForm": {
+            "name": "Contact Form",
+            "actions": [
+                { 
+                    "type": "email", 
+                    "to": "{info@umutyildirim.com}" 
+                }
+            ]
+        }
+    }
+}

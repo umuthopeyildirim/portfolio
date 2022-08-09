@@ -236,7 +236,7 @@ const config = {
           },
         ],
         // Please do not remove the credits, help to publicize Docusaurus :)
-        copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with Docusaurus🦖`,
+        copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with <a href="https://docusaurus.io" target="_blank">Docusaurus🦖</a>`,
       },
     }),
 };
