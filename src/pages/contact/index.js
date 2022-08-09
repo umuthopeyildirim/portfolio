@@ -14,7 +14,7 @@
  import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
  import useBaseUrl from '@docusaurus/useBaseUrl';
  import styles from './styles.module.css';
- import {ContactForm} from './contactModule';
+ import {ContactForm} from './contact';
 
  
  export default function Home() {

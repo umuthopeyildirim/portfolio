@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import styles from './/styles.module.css';
+import styles from './styles.module.css';
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("xaykywla");
@@ -84,3 +84,5 @@ export function ContactForm() {
      </div>
   );
 }
+
+export default ContactForm;
