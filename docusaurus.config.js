@@ -92,7 +92,16 @@ const config = {
           indexName: "refine",
           contextualSearch: true,
       },
-      metadata: [{name: 'keywords', content: 'Umut YILDIRIM, Umut Hope YILDIRIM, Umut, Hope, Yildirim, Portfolio, Blog, Gists, Tutorials, Projects, About'}],
+      metadata: [
+        {
+          name: 'keywords', 
+          content: 'Umut YILDIRIM, Umut Hope YILDIRIM, Umut, Hope, Yildirim, Portfolio, Blog, Gists, Tutorials, Projects, About'
+        },
+        {
+          name: 'description',
+          content: 'Umut YILDIRIM\'s Portfolio Website'
+        },
+      ],
       navbar: {
         logo: {
           alt: 'Umut YILDIRIM Logo',
@@ -227,7 +236,7 @@ const config = {
           },
         ],
         // Please do not remove the credits, help to publicize Docusaurus :)
-        copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with Docusaurus🦖`,
+        copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with <a href="https://docusaurus.io" target="_blank">Docusaurus🦖</a>`,
       },
     }),
 };
