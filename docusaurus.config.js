@@ -26,6 +26,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'hopesweaty', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
+  
   customFields: {
     apiKey: process.env.FIREBASE_APIKEY,
     authDomain: process.env.FIREBASE_AUTHDOMAIN,
