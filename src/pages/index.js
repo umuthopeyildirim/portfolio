@@ -14,6 +14,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import Hero from "../components/Hero";
 
 const features = [
   {
@@ -78,28 +79,8 @@ export default function Home() {
   return (
     <Layout
       title={`Home`}
-      description="Description will go into a meta tag in <head />">
-      <header
-        className={clsx(
-          'hero hero--primary',
-          styles.heroBanner,
-          'heroBannerIndex',
-        )}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </header>
+      description="I like full-stack development. Also, I am interested in the cloud, computer vision and artificial intelligence.">
+      <Hero />
       <section className={styles.servers_wrapper}>
         <h2>Projects</h2>
         <div className={styles.servers}>

@@ -26,7 +26,18 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'hopesweaty', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
-
+  
+  customFields: {
+    apiKey: process.env.FIREBASE_APIKEY,
+    authDomain: process.env.FIREBASE_AUTHDOMAIN,
+    projectId: process.env.FIREBASE_PROJECTID,
+    storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+    appId: process.env.FIREBASE_APPID,
+    measurementId: process.env.FIREBASE_MEASUREMENTID,
+    cloudMessagingVapidKey: process.env.FIREBASE_CLOUDMESSAGINGVAPIDKEY,
+    reCaptchaV3SiteKey: process.env.RECAPTCHA_V3_SITEKEY
+  },
   plugins: [
     [
       'docusaurus-plugin-content-gists',
@@ -41,6 +52,12 @@ const config = {
       {
         trackingID: 'G-RTD554CXLK',
         anonymizeIP: false,
+      },
+    ],
+    [
+      "docusaurus2-dotenv",
+      {
+        systemvars: true,
       },
     ],
   ],

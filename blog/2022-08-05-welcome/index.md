@@ -1,25 +1,32 @@
 ---
-slug: welcome
-title: Welcome
+slug: hithere
+title: Hi There
 authors: [hope]
 tags: [new blog, new portfolio, hello, docusaurus]
 ---
 
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
+How are you? I hope you are doing well and staying healthy. My name is [hope](https://umutyildirim.com/about). I am a software engineer and a full time student. 
+I created this website to share my thoughts and new things I have learned. I hope you enjoy it.
 
-Simply add Markdown files (or folders) to the `blog` directory.
+So let me explain how I structured this website! I promise you I won't bore you with the details :D
 
-Regular blog authors can be added to `authors.yml`.
+These are the main sections of the website:
+- [Main Page](/)
+- [About Me](/about)
+- [Projects](/projects)
+- [Tutorials](/docs/intro)
+- [Blogs](/blog)
+- [Gists](/gists)
+- [Contact](/contact)
 
-The blog post date can be extracted from filenames, such as:
+So let's start with the [main page](/). 
 
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
 
-A blog post folder can be convenient to co-locate blog post images:
+## Main Page
+It is the home page of the website. It contains some basic information about me and a list of my recent projects. If you click on the 'Get Started' button, you will be redirected to the tutorial page.
 
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
+## Tutorials
+NEXT! Let's go to the [tutorial page](/tutorial). It contains a list of tutorials I have written. You can click on the 'Get Started' button to go to the first tutorial.
 
-The blog supports tags as well!
+After you finish reading all my tutorials, you can check out my projects. I'm sure you will find something you like ;) 
 
-**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.

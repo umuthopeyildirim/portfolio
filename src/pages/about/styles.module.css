@@ -1,0 +1,122 @@
+/**
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @format
+ */
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureImage {
+  height: 200px;
+  width: 200px;
+}
+
+/* YeeCords */
+.icon__wrapper {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  margin: .5rem 0 .5rem 1.2rem;
+}
+
+.icon {
+  border-radius: 15px;
+  width: 56px;
+  height: 56px;
+  transition: .3s;
+}
+
+.icon:hover {
+  border-radius: 5px;
+}
+
+.servers {
+  display: flex;
+}
+
+.servers_wrapper {
+  display: flex;
+  align-items: center;
+  background: #2e333a;
+  padding: 1rem var(--global-padding);
+}
+
+.servers_wrapper > h2 {
+  flex-grow: 1;
+  margin: 0;
+  color: azure;
+}
+
+@media (max-width: 1024px) {
+  .servers_wrapper {
+    margin-top: 4rem;
+    padding: 1rem 1rem;
+  }
+
+  .servers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .icon__wrapper {
+    margin: .5rem .6rem;
+  }
+
+  .button {
+    padding: .5rem 2.75rem;
+  }
+}
+
+@media (max-width: 728px) {
+  .servers_wrapper {
+    flex-direction: column;
+    margin: 0 calc(var(--global-padding) * -1);
+    border-radius: 0;
+  }
+
+  .servers_wrapper > h2 {
+    font-size: 1.5rem;
+    margin: .5rem 0;
+  }
+
+  .buttons {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button {
+    flex-grow: 1;
+  }
+}
