@@ -6,14 +6,14 @@ import { getMessaging, getToken } from "firebase/messaging";
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
 const firebaseConfig = {
-    apiKey: process.env.FIREBASE_APIKEY,
-    authDomain: process.env.FIREBASE_AUTHDOMAIN,
-    projectId: process.env.FIREBASE_PROJECTID,
-    storageBucket: process.env.FIREBASE_STORAGEBUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
-    appId: process.env.FIREBASE_APPID,
-    measurementId:process.env.FIREBASE_MEASUREMENTID
-  };
+  apiKey: process.env.FIREBASE_APIKEY,
+  authDomain: process.env.FIREBASE_AUTHDOMAIN,
+  projectId: process.env.FIREBASE_PROJECTID,
+  storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.FIREBASE_APPID,
+  measurementId:process.env.FIREBASE_MEASUREMENTID
+};
 
 export const app = initializeApp(firebaseConfig);
 
@@ -39,3 +39,5 @@ if (ExecutionEnvironment.canUseDOM) {
     // ...
   });
 }
+
+console.log(firebaseConfig);
