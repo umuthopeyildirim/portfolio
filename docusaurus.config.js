@@ -34,7 +34,9 @@ const config = {
     storageBucket: process.env.FIREBASE_STORAGEBUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
     appId: process.env.FIREBASE_APPID,
-    measurementId: process.env.FIREBASE_MEASUREMENTID
+    measurementId: process.env.FIREBASE_MEASUREMENTID,
+    cloudMessagingVapidKey: process.env.FIREBASE_CLOUDMESSAGINGVAPIDKEY,
+    reCaptchaV3SiteKey: process.env.RECAPTCHA_V3_SITEKEY
   },
   plugins: [
     [
