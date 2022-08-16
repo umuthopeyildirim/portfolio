@@ -69,11 +69,11 @@ export default function Home() {
   return (
     <Layout
       title={`About Me`}
-      description="Description will go into a meta tag in <head />">
+      description="Get to know me! ">
       <header className={clsx('hero hero--primary', styles.heroBanner, 'heroBannerAboutMe')}>
         <div className="container">
           <h1 className="hero__title">About Me</h1>
-          <p className="hero__subtitle"></p>
+          <p className="hero__subtitle">Get to know me!</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
