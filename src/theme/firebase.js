@@ -39,5 +39,3 @@ if (ExecutionEnvironment.canUseDOM) {
     // ...
   });
 }
-
-console.log(firebaseConfig);
