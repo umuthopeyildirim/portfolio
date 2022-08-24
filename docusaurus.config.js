@@ -183,6 +183,9 @@ const config = {
               {
                 html: '<a target="_blank" href="https://www.buymeacoffee.com/hope"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=hope&button_colour=215fc5&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>',
               },
+              {
+                html: '<a href="https://twitter.com/hopesweaty?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @HopeSweaty</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
+              },
               // {
               //   html: `<div style="display: flex; align-items: center;"><iframe src="https://github.com/sponsors/johnnyreilly/button" title="Sponsor johnnyreilly" height="35" width="116" style="border: 0;"></iframe><div>&nbsp;on GitHub</div></div>`,
               // },
