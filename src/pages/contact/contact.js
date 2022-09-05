@@ -32,7 +32,7 @@ export function ContactForm() {
                             <h5 className={styles.contactSubTitle}>Social media? Of course...</h5>
                             <a href="https://www.instagram.com/umuthopeyildirim/" target="_blank">Instagram</a><br/>
                             <a href="https://www.linkedin.com/in/umuthopeyildirim/" target="_blank">LinkedIn</a><br/>
-                            <a href="https://github.com/HopeSweaty" target="_blank">GitHub</a><br/>
+                            <a href="https://github.com/umuthopeyildirim" target="_blank">GitHub</a><br/>
                             <a href="https://garden.umutyildirim.com/" target="_blank">Digital Garden</a>
 
                         </div>

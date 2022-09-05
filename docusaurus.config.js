@@ -24,7 +24,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'hopesweaty', // Usually your GitHub org/user name.
+  organizationName: 'umuthopeyildirim', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
   
   customFields: {
@@ -71,14 +71,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/HopeSweaty/portfolio/blob/main/',
+            'https://github.com/umuthopeyildirim/portfolio/blob/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/HopeSweaty/portfolio/blob/main/',
+            'https://github.com/umuthopeyildirim/portfolio/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -161,7 +161,7 @@ const config = {
           },
           // Please keep GitHub link to the right for consistency.
           {
-            href: 'https://github.com/hopesweaty/',
+            href: 'https://github.com/umuthopeyildirim/',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -242,7 +242,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/HopeSweaty',
+                href: 'https://github.com/umuthopeyildirim',
               },
               {
                 label: 'LinkedIn',
