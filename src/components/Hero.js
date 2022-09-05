@@ -25,7 +25,7 @@ export default function Hero() {
             </Link>
             <Link
               className="button button--secondary button--lg"
-              to="https://github.com/HopeSweaty"
+              to="https://github.com/umuthopeyildirim"
             >
               <img
                 className={styles.githubIcon}
