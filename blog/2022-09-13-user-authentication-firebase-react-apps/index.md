@@ -26,21 +26,21 @@ Once you’ve given it a sweet name, click on **Continue** and you should be pro
 
 Once you’ve completed all the steps, you should be presented with the dashboard, which looks something like this:
 
-![Firebase Project Created](/images/react-firebase-console-dashboard.png)
+![Firebase Project Created](./images/react-firebase-console-dashboard.png)
 First, let’s set up authentication. Click on **Authentication** on the sidebar and click on **Get Started** to enable the module. Now you will be presented with various authentication options:
 
-![Firebase Auth Page](/images/authentication-page-firebase.png)
+![Firebase Auth Page](./images/authentication-page-firebase.png)
 First click on **Email/Password**, enable it, and save it:
 
-![Email Password Options Firebase](/images/email-password-options-firebase.png)
+![Email Password Options Firebase](./images/email-password-options-firebase.png)
 Now press on **Google**:
 
-![Google Options Firebase](/images/google-options-firebase-console.png)
+![Google Options Firebase](./images/google-options-firebase-console.png)
 Press enable, select a project support email address, and click on **Save** to activate Google Authentication for our app.
 
 Now, let’s set up the database we are going to use for our project, which is Cloud Firestore. Click on **Cloud Firestore** on the sidebar and click on **Create Database**. You should be presented with the following dialog:
 
-![Cloud Firestore Create Database](/images/cloud-firestore-create-database-e1629488849174.png)
+![Cloud Firestore Create Database](./images/cloud-firestore-create-database.png)
 Remember to select **Start in test mode**. We are using test mode because we are not dealing with production-level applications in this tutorial. Production mode databases require a configuration of security rules, which is out of the scope of this tutorial.
 
 Click Next. Select the region. I’ll leave it to the default, and then press **Enable**. This should completely set up your Cloud Firestore database.
@@ -62,7 +62,7 @@ Type the following command to run your React app:
 cd appname && npm start
 ```
 This should fire up your browser and you should see the following screen:
-![React App Beginning Setup Firebase](/images/react-app-beginning-setup-firebase.png)
+![React App Beginning Setup Firebase](./images/react-app-beginning-setup-firebase.png)
 Now, let’s do some cleanup so that we can continue with coding. Delete the following files from the `src` folder: `App.test.js`, `logo.svg`, and `setupTests.js`. Once you delete these files, delete all the contents of `App.css` and you will see an error on the React app. Don’t worry; just remove the logo imports in `App.js` and empty the div so that your `App.js` looks like this:
 ```javascript
 import './App.css';
@@ -78,10 +78,10 @@ export default App;
 ## Integrating Firebase into our React app
 Go to your Firebase Console dashboard, click on **Project Settings**, scroll down, and you should see something like this:
 
-![Project Settings No App Firebase](/images/project-settings-no-app-firebase.png)
-Click on the third icon (</>) to configure our Firebase project for the web. Enter the app name and click on **Continue**. Go back to the project settings and you should now see a config like this:
+![Project Settings No App Firebase](./images/project-settings-no-app-firebase.png)
+Click on the third icon to configure our Firebase project for the web. Enter the app name and click on **Continue**. Go back to the project settings and you should now see a config like this:
 
-![Web Config Firebase Console](/images/web-config-firebase-console.png)
+![Web Config Firebase Console](./images/web-config-firebase-console.png)
 Copy the config. Create a new file in the `src` folder named `firebase.js`. Let’s first import `firebase` modules, since Firebase uses modular usage in v9:
 
 ```javascript
@@ -422,7 +422,7 @@ Here’s what’s happening in the above code block. We are using the functions 
 
 Here’s what you’ll see on your screen:
 
-![Basic Login Page React Firebase](/images/basic-login-page-react-firebase.png)
+![Basic Login Page React Firebase](./images/basic-login-page-react-firebase.png)
 Create a new component called `Register` to handle user registrations. Here are the styles for `Register.css`:
 ```css
 .register {
