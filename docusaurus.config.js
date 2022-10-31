@@ -97,168 +97,180 @@ const config = {
     ],
   ],
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  themes: ['docusaurus-theme-search-typesense'],
   themeConfig:
-    ({
-      colorMode: {
-        defaultMode: 'dark',
-        respectPrefersColorScheme: true,
+  ({
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+    },
+    typesense: {
+      typesenseCollectionName: 'docusaurus-2', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
+      
+      typesenseServerConfig: {
+        nodes: [
+          {
+            host: 'typesense.umutyildirim.com',
+            port: 443,
+            protocol: 'https',
+          },
+        ],
+        apiKey: process.env.TYPESENSE_API_KEY,
       },
-      algolia: {
-          appId: "KRR9VEUPCT",
-          apiKey: "cd0188125dcd31fb4b011b5e536d963a",
-          indexName: "refine",
-          contextualSearch: true,
+      typesenseSearchParameters: {},
+      contextualSearch: true,
+    },
+    metadata: [
+      {
+        name: 'keywords', 
+        content: 'Umut YILDIRIM, Umut Hope YILDIRIM, Umut, Hope, Yildirim, Portfolio, Blog, Gists, Tutorials, Projects, About'
       },
-      metadata: [
+      {
+        name: 'description',
+        content: 'Umut YILDIRIM\'s Portfolio Website'
+      },
+      {
+        name: 'docsearch:language_tag',
+        content: 'en'
+      },
+    ],
+    navbar: {
+      logo: {
+        alt: 'Umut YILDIRIM Logo',
+        src: `/img/logo-light.png`,
+        srcDark: `/img/logo-dark.png`,
+        href: '/',
+        target: '_self',
+      },
+      items: [
         {
-          name: 'keywords', 
-          content: 'Umut YILDIRIM, Umut Hope YILDIRIM, Umut, Hope, Yildirim, Portfolio, Blog, Gists, Tutorials, Projects, About'
+          to: 'about', 
+          label: 'About Me', 
+          position: 'left' 
         },
         {
-          name: 'description',
-          content: 'Umut YILDIRIM\'s Portfolio Website'
+          to: 'projects',
+          label: 'Projects',
+          position: 'left',
+        },
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: 'Tutorials',
+        },
+        {
+          to: 'blog', 
+          label: 'Blogs', 
+          position: 'left'
+        },
+        {
+          to: 'gists', 
+          label: 'Gists', 
+          position: 'left' 
+        },
+        {
+          to: 'contact', 
+          label: 'Contact', 
+          position: 'left' 
+        },
+        // Please keep GitHub link to the right for consistency.
+        {
+          href: 'https://github.com/umuthopeyildirim/',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
+        },
+        {
+          href: 'https://garden.umutyildirim.com/',
+          position: 'right',
+          className: 'header-obsidian-link',
+          'aria-label': 'Digital Garden Link',
         },
       ],
-      navbar: {
-        logo: {
-          alt: 'Umut YILDIRIM Logo',
-          src: `/img/logo-light.png`,
-          srcDark: `/img/logo-dark.png`,
-          href: '/',
-          target: '_self',
+    },
+    footer: {
+      style: 'light',
+      links: [
+        {
+          title: 'Support me',
+          items: [
+            {
+              html: '<a target="_blank" href="https://www.buymeacoffee.com/hope"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=hope&button_colour=215fc5&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>',
+            },
+            {
+              html: '<a href="https://twitter.com/hopesweaty?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @HopeSweaty</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
+            },
+          ],
         },
-        items: [
-          {
-            to: 'about', 
-            label: 'About Me', 
-            position: 'left' 
-          },
-          {
-            to: 'projects',
-            label: 'Projects',
-            position: 'left',
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorials',
-          },
-          {
-            to: 'blog', 
-            label: 'Blogs', 
-            position: 'left'
-          },
-          {
-            to: 'gists', 
-            label: 'Gists', 
-            position: 'left' 
-          },
-          {
-            to: 'contact', 
-            label: 'Contact', 
-            position: 'left' 
-          },
-          // Please keep GitHub link to the right for consistency.
-          {
-            href: 'https://github.com/umuthopeyildirim/',
-            position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
-          },
-          {
-            href: 'https://garden.umutyildirim.com/',
-            position: 'right',
-            className: 'header-obsidian-link',
-            'aria-label': 'Digital Garden Link',
-          },
-        ],
-      },
-      footer: {
-        style: 'light',
-        links: [
-          {
-            title: 'Support me',
-            items: [
-              {
-                html: '<a target="_blank" href="https://www.buymeacoffee.com/hope"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=hope&button_colour=215fc5&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>',
-              },
-              {
-                html: '<a href="https://twitter.com/hopesweaty?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @HopeSweaty</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
-              },
-              // {
-              //   html: `<div style="display: flex; align-items: center;"><iframe src="https://github.com/sponsors/johnnyreilly/button" title="Sponsor johnnyreilly" height="35" width="116" style="border: 0;"></iframe><div>&nbsp;on GitHub</div></div>`,
-              // },
-            ],
-          },
-          {
-            title: 'Discover',
-            items: [
-              {
-                label: 'Projects',
-                to: 'projects',
-              },
-              {
-                label: 'Blog',
-                to: 'blog',
-              },
-              {
-                label: 'Tutorials',
-                to: 'docs/intro',
-              },
-              {
-                label: 'Gists',
-                to: 'gists',
-              },
-            ],
-          },
-          {
-            title: 'Get To Know Me',
-            items: [
-              {
-                label: 'About Me',
-                to: 'about',
-              },
-              {
-                label: 'Contact Me',
-                to: 'contact',
-              },
-              {
-                label: 'My Resume',
-                href: 'https://umutyildirim.com/download/resume.pdf',
-              },
-              {
-                label: 'My CV',
-                href: 'https://umutyildirim.com/download/cv.pdf',
-              },
-            ],
-          },
-          {
-            title: 'Social Media',
-            items: [
-              {
-                label: 'Digital Garden',
-                href: 'https://garden.umutyildirim.com/',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/umuthopeyildirim',
-              },
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/umuthopeyildirim/',
-              },
-              {
-                label: 'Instagram',
-                href: 'https://www.instagram.com/umuthopeyildirim/',
-              },
-            ],
-          },
-        ],
-        // Please do not remove the credits, help to publicize Docusaurus :)
-        copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with <a href="https://docusaurus.io" target="_blank">Docusaurus🦖</a>`,
-      },
-    }),
+        {
+          title: 'Discover',
+          items: [
+            {
+              label: 'Projects',
+              to: 'projects',
+            },
+            {
+              label: 'Blog',
+              to: 'blog',
+            },
+            {
+              label: 'Tutorials',
+              to: 'docs/intro',
+            },
+            {
+              label: 'Gists',
+              to: 'gists',
+            },
+          ],
+        },
+        {
+          title: 'Get To Know Me',
+          items: [
+            {
+              label: 'About Me',
+              to: 'about',
+            },
+            {
+              label: 'Contact Me',
+              to: 'contact',
+            },
+            {
+              label: 'My Resume',
+              href: 'https://umutyildirim.com/download/resume.pdf',
+            },
+            {
+              label: 'My CV',
+              href: 'https://umutyildirim.com/download/cv.pdf',
+            },
+          ],
+        },
+        {
+          title: 'Social Media',
+          items: [
+            {
+              label: 'Digital Garden',
+              href: 'https://garden.umutyildirim.com/',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/umuthopeyildirim',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/umuthopeyildirim/',
+            },
+            {
+              label: 'Instagram',
+              href: 'https://www.instagram.com/umuthopeyildirim/',
+            },
+          ],
+        },
+      ],
+      // Please do not remove the credits, help to publicize Docusaurus :)
+      copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with <a href="https://docusaurus.io" target="_blank">Docusaurus🦖</a>`,
+    },
+  }),
 };
 
 module.exports = config;
