@@ -110,12 +110,12 @@ const config = {
       typesenseServerConfig: {
         nodes: [
           {
-            host: 'typesense.umutyildirim.com',
+            host: 'a8vrziso260fc95hp-1.a1.typesense.net',
             port: 443,
             protocol: 'https',
           },
         ],
-        apiKey: process.env.TYPESENSE_API_KEY,
+        apiKey: process.env.TYPESENSE_READ_ONLY_API_KEY,
       },
       typesenseSearchParameters: {},
       contextualSearch: true,
