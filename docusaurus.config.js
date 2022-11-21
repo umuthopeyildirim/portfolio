@@ -105,7 +105,7 @@ const config = {
       respectPrefersColorScheme: true,
     },
     typesense: {
-      typesenseCollectionName: 'docusaurus-2', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
+      typesenseCollectionName: 'hope-portfolio_1669069064', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
       
       typesenseServerConfig: {
         nodes: [
