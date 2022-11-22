@@ -1,7 +1,7 @@
 {
   "index_name": "hope-portfolio",
-  "start_urls": ["https://portfolio-umut-yildirim.web.app/"],
-  "sitemap_urls": ["https://portfolio-umut-yildirim.web.app/sitemap.xml"],
+  "start_urls": ["https://umutyildirim.com/"],
+  "sitemap_urls": ["https://umutyildirim.com/sitemap.xml"],
   "sitemap_alternate_links": true,
   "stop_urls": ["/tests"],
   "selectors": {

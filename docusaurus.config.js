@@ -16,7 +16,7 @@ require('dotenv').config()
 const config = {
   title: 'Umut Hope YILDIRIM',
   tagline: 'My Portfolio Website',
-  url: 'https://portfolio-umut-yildirim.web.app',
+  url: 'https://umutyildirim.com/',
   baseUrl: '/',
   onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'log',
