@@ -11,32 +11,32 @@ export default function Hero() {
         <div className="center-please row">
           <div className="col col--6">
             <h1>
-              A Docusaurus-powered<br />
-              <span className="highlight">portfolio for everyone</span>
+              Hi. I'm <span className={styles.highlight}>Umut YILDIRIM</span><br />
+              Full-stack Developer
             </h1>
+            <p>
+              I like full-stack development. Also, I am interested in the cloud, computer vision and artificial intelligence.
+            </p>
             <Link
               className={clsx(
                 "button button--primary button--lg",
                 styles.getStartedButton
               )}
-              to="/docs/intro"
+              to="/about"
             >
-              Get Started
+              About Me
             </Link>
             <Link
               className="button button--secondary button--lg"
-              to="https://github.com/umuthopeyildirim"
+              to="/projects"
             >
               <img
                 className={styles.githubIcon}
-                src={useBaseUrl("/img/github.svg")}
-                alt="GitHub Logo"
+                src={useBaseUrl("/img/tools-solid.svg")}
+                alt="Tools Icon"
               />{" "}
-              <span className={styles.githubButtonText}>GitHub</span>
+              <span className={styles.githubButtonText}>Projects</span>
             </Link>
-            <p className="padding-top--md">
-              I like full-stack development. Also, I am interested in the cloud, computer vision and artificial intelligence.
-            </p>
           </div>
           <div className="col col--6">
             <img

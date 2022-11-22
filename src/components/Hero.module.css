@@ -10,7 +10,7 @@
   
   .hero h1 {
     font-size: 3rem;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
   }
 
   .center-please {
@@ -27,6 +27,7 @@
   
   .githubIcon {
     vertical-align: middle;
+    height: 1rem;
   }
   
   .githubButtonText {
@@ -37,4 +38,11 @@
     border-radius: 50%;
     width: 17rem;
     height: 17rem;
+  }
+
+  .highlight {
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(270deg,#0054ad 0,#b8fb3c);
+    background-clip: text;
+    -webkit-background-clip: text;
   }
