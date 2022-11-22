@@ -22,10 +22,6 @@ export function ContactForm() {
 
                     <div className={styles.contactRow}>
                         <div className={styles.contactGrid}>
-                            <h5 className={styles.contactSubTitle}>Feel like talking?</h5>
-                            <a href="tel:(347)616-4788">+1 (347) 616-4788</a>
-
-
                             <h5 className={styles.contactSubTitle}>Don't feel like talking?</h5>
                             <a href="mailto:info@umutyildirim.com" target="_blank">Email Me</a>
 

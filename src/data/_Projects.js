@@ -2,490 +2,360 @@ import React from "react";
 
 const projects = [
   {
-    category: "Project",
-    title: "nodejs-mysql-cloudformation",
-    slug: "#nodejs-mysql-cloudformation",
-    subtitle:
-      "An example for deploying a NodeJS app to Beanstalk using AWS CloudFormation.",
-    period: "November 2020",
-    tech: "AWS CloudFormation",
-    description: (
-      <>
-        <p>
-          An example of how you can perform Infrastructure-As-Code (IaC) using
-          AWS CloudFormation and Continuous-Integration/Continuous-Deployment
-          (CI/CD) using AWS CodePipeline.
-        </p>
-        <p>
-          This example deploys the NodeJS-ExpressJS-MySQL
-          Create-Read-Update-Delete (CRUD) application at{" "}
-          <a href="https://github.com/DigiPie/nodejs-mysql-aws-beanstalk">
-            DigiPie/nodejs-mysql-aws-beanstalk
-          </a>
-          , by using the CloudFormation IaC templates in this repository and
-          setting up a simple AWS CodePipeline.
-        </p>
-        <p>
-          I worked on this project to learn more about the{" "}
-          <a href="https://www.hashicorp.com/resources/getting-started-with-infrastructure-as-code-iac">
-            Infrastructure-as-Code
-          </a>{" "}
-          concept and{" "}
-          <a href="https://aws.amazon.com/cloudformation/">
-            AWS CloudFormation
-          </a>
-          .
-        </p>
-      </>
-    ),
-    links: [
-      {
-        name: "GitHub",
-        link: "https://github.com/DigiPie/nodejs-mysql-cloudformation",
-      },
-    ],
-  },
-  {
-    category: "Project",
-    title: "mocha-chai-mongoose",
-    slug: "#mocha-chai-mongoose",
-    imageUrl: "img/projects/mochai.png",
-    subtitle: "An example for testing a NodeJS-MongoDB app with Mocha-Chai.",
-    period: "April 2020",
-    tech: "Mocha, Chai, NodeJS, ExpressJS, Mongoose (MongoDB)",
-    description: (
-      <>
-        <p>
-          An up-to-date 2020 example of how you can use Mocha and Chai to
-          perform API testing for a Node-ExpressJS-Mongoose app. You will be
-          able to test your code locally and also automatically using Github
-          Action.
-        </p>
-        <p>
-          <a
-            href="https://github.com/DigiPie/mocha-chai-mongoose/workflows/Node.js%20CI/badge.svg"
-            title="Node.js CI"
-          >
-            <img src="https://github.com/DigiPie/mocha-chai-mongoose/workflows/Node.js%20CI/badge.svg" />
-          </a>
-        </p>
-        <p>
-          I worked on this project to learn more about API testing using{" "}
-          <a href="https://mochajs.org/">Mocha</a> and{" "}
-          <a href="https://www.chaijs.com/">Chai</a>, and also to practice
-          setting up a NodeJS-ExpressJS-Mongoose backend application.
-        </p>
-      </>
-    ),
-    links: [
-      {
-        name: "GitHub",
-        link: "https://github.com/DigiPie/mocha-chai-mongoose",
-      },
-    ],
-  },
-  {
     category: "Open Source Tool",
-    title: "Mongo-Action",
-    slug: "#mongo-action",
-    imageUrl: "img/projects/mongo-action.png",
-    subtitle: "A  Github action which creates a mongo Docker container.",
-    period: "March 2020",
-    tech: "GitHub Action, NodeJS, Docker",
+    title: "Puppateer Screenshot",
+    slug: "#puppateer-screenshot",
+    imageUrl: "img/projects/puppateer-screenshot.png",
+    subtitle: "The Google Cloud function that can take screenshots of websites.", 
+    period: "21 Nov 2022",
+    tech: "JavaScript, Google Cloud Storage, Google Cloud Functions, Puppetter",
+    team: [
+      {
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
+    ],
     description: (
       <>
         <p>
-          mongo-action is a Github Action which creates a mongo Docker container
-          using the official{" "}
-          <a href="https://hub.docker.com/_/mongo">Dockerhub image</a>. The
-          MongoDB instance's port will be exposed to other containers and also
-          to the host running the Github Workflow.
+          This is a Google Cloud function that can take screenshots of websites. It uses Puppateer to mimic a browser and take screenshots of websites. It is a serverless function that can be triggered by HTTP requests. 
         </p>
+        <h4>Deployment & Usage</h4>
         <p>
-          <a
-            href="https://github.com/DigiPie/mongo-action/workflows/mongo-action%20CI/badge.svg"
-            title="mongo-action CI"
-          >
-            <img src="https://github.com/DigiPie/mongo-action/workflows/mongo-action%20CI/badge.svg" />
-          </a>
-        </p>
-        <p>
-          I created this Github Action to learn more about Continuous
-          Integration tooling, and to simplify automated testing for my own{" "}
-          <a href="https://github.com/DigiPie/mocha-chai-mongoose">
-            Node-ExpressJS-Mongoose
-          </a>{" "}
-          project.
-        </p>
-        <p>
-          By using this Github Action, there is no longer a need to provision a
-          test database on MongoDB Atlas or elsewhere. Furthermore, each test
-          will run on a fresh, isolated copy of a MongoDB instance.
-        </p>
-        <p>
-          I submitted this to the{" "}
-          <a href="https://githubhackathon.com/">
-            Github Hackathon for Github Actions
-          </a>
-          .
+          For deployment and usage go to <a href="/blog/building-a-website-screenshot-api-with-puppeteer-and-google-cloud-functions" target="_blank">here</a>.
         </p>
       </>
     ),
     links: [
       {
         name: "GitHub",
-        link: "https://github.com/DigiPie/mongo-action",
+        link: "https://github.com/umuthopeyildirim/puppateer-screenshot",
       },
       {
-        name: "GitHub Marketplace",
-        link: "https://github.com/marketplace/actions/mongo-action",
+        name: "Blog",
+        link: "/blog/building-a-website-screenshot-api-with-puppeteer-and-google-cloud-functions"
+      }
+    ],
+  },
+  {
+    category: "Website",
+    title: "Markhope",
+    slug: "#markhope",
+    imageUrl: "img/projects/markhope.png",
+    subtitle: "MarkHope is a platform for sharing and discovering the best content on the web using markdown and Jekyll technology.", 
+    period: "6 Oct 2022 - 10 Oct 2022",
+    tech: "Rails, Markdown, JavaScript, TailwindCSS, ReactJS, Ruby",
+    team: [
+      {
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
+    ],
+    description: (
+      <>
+        <p>
+          MarkHope is a markdown hosting service. It's a simple way to host your markdown files on the web. This is a no-code application.
+        </p>
+        <h4>Deployment</h4>
+        <ul>
+          <li>Ruby version: 2.7</li>
+          <li>Database: PostgreSQL</li>
+          <li>Configuration: <code>bundle install</code></li>
+          <li>Database creation: <code>rails db:migrate</code></li>
+          <li>Database initialization: <code>rails db:seed</code></li>
+          <li>Deployment instructions: <code>rails s</code></li>
+        </ul>
+        <h4>Usage</h4>
+        <p>
+          For Usage go to MarkHope Docs <a href="/docs/category/markhope" target="_blank">here</a>.
+        </p>
+      </>
+    ),
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/umuthopeyildirim/markhope",
+      },
+      {
+        name: "Website",
+        link: "https://markhope.ml"
+      },
+      {
+        name: "Docs",
+        link: "/docs/category/markhope"
+      }
+    ],
+  },
+  {
+    category: "Website",
+    title: "MindGarden",
+    slug: "#mindgarden",
+    imageUrl: "img/projects/mindgarden.png",
+    subtitle: "MindGarden is an dairy writing software, but you can also express your feelings on your dairies.", 
+    period: "6 Oct 2022 - 10 Oct 2022",
+    tech: "Sinatra, JavaScript, TailwindCSS, ReactJS, Diary, Ruby",
+    team: [
+      {
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
+    ],
+    description: (
+      <>
+        <p>
+          This project is was initially intended to focus more on the backend than the frontend, so that we could try to keep the React side of things relatively simple, but thanks to one of our engineers here at MindGarden, 
+          not only did he help to build a beautiful backend, but he single handedly tackled all of the frontend work on his own and the outcome was simply amazing. 
+          This gave the rest of the team time to master our newly consumed knowledge about Ruby while creating an amazing back end. 
+        </p>
+        <p>
+          This project focuses on developing a Sinatra API backend that makes use of Active Record to access and store data in a database. 
+          This database will be accessed and stored by a separate React frontend that uses the API to communicate with the database.
+        </p>
+
+      </>
+    ),
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/umuthopeyildirim/mindgarden",
+      },
+      {
+        name: "Website",
+        link: "https://mindgarden.ml"
+      }
+    ],
+  },
+  {
+    category: "Website",
+    title: "MyPassManager",
+    slug: "#mypassmanager",
+    imageUrl: "img/projects/mypassmanager.png",
+    subtitle: "Website that allows users to store secure passwords and access them from anywhere", 
+    period: "12 Sep 2022 - 16 Sep 2022",
+    tech: "Firebase, JavaScript, TailwindCSS, ReactJS, Password Manager",
+    team: [
+      {
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
+    ],
+    description: (
+      <>
+        <p>
+          MyPass Manager is a simple password manager that uses the MyPass API to store your passwords.
+        </p>
+        <h4>Installation</h4>
+         <p>MyPass Manager uses Firebase for backend stuff, so you need to create a Firebase project and add your project api key to .env file. You can find the api key in your Firebase project settings.</p>
+        <p>After that, you need to install the dependencies and run the project.</p>
+        <code>yarn install && yarn start</code>
+        
+        <h4><br></br>Deployment</h4>
+        <p>You can deploy this website using Firebase Hosting easily. Just use Firebase Hosting <a target="_blank" href="https://firebase.google.com/docs/hosting">documentation</a>. </p>
+      </>
+    ),
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/umuthopeyildirim/mypassmanager",
+      },
+      {
+        name: "Website",
+        link: "https://mypassmanager.ml"
+      }
+    ],
+  },
+  {
+    category: "Smart Contract",
+    title: "Decentralized Todo",
+    slug: "#decenralized-todo",
+    imageUrl: "img/projects/decenralized-todo.png",
+    subtitle: "A decentralized todo list on the Near blockchain", 
+    period: "25 April 2022",
+    tech: "TypeScript, JavaScript, Shell",
+    team: [
+      {
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
+    ],
+    description: (
+      <>
+        <p>
+          This contract can bu used to add, delete and mark your todo list.
+        </p>
+        <h4>Setup</h4>
+         <p>1. Install dependencies <code>cd decentralized-todo && yarn</code></p>
+         <p>2. Compile the contract - <code>yarn build</code></p>
+         <p>3. Deploy the contract <code>yarn deploy</code> PS: This will deploy it to your actual test account</p>
+
+        <h4>Go to Github for contract interactions.</h4>
+      </>
+    ),
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/umuthopeyildirim/decentralized-todo",
       },
     ],
   },
   {
     category: "Website",
-    title: "Google Developer Student Club NUS",
-    slug: "#dsc-nus",
-    imageUrl: "img/projects/dscnustech.png",
-    subtitle:
-      "DSC NUS tech team's website for workshop registration and materials.",
-    period: "January to March 2020",
-    tech: "Jekyll, Bootstrap, Github pages",
+    title: "Educatory: Personalized Educational Tool",
+    slug: "#educatory",
+    imageUrl: "img/projects/educatory.png",
+    subtitle: "Educatory is a personalized educational tool. With a comprehensive Kindergarten-4th grade curriculum, personalized guidance, and real-time analytics, Educatory meets each student's unique needs.", 
+    period: "12 April 2020",
+    tech: "PHP, MySQL",
     team: [
       {
-        name: "Andre Wong",
-        link: "https://github.com/AndreWongZH/",
-      },
-      {
-        name: "Evan Tay",
-        link: "https://github.com/DigiPie/",
-      },
-      {
-        name: "Melodies Sim",
-        link: "https://github.com/Happytreat/",
-      },
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
     ],
     description: (
       <>
-        <p>
-          Developer Student Club, National University of Singapore is made up of
-          people from diverse backgrounds, majors, years of study, genders and
-          races. We come together to push our mission of #techforgood.
-        </p>
-        <p>
-          The Technology team is responsible for the execution of DSC-NUS
-          workshops and thematic tech events. I co-lead the team as the Deputy
-          Head of Technology.
-        </p>
-        <p>
-          We created this website to act as a one-stop portal for NUS students
-          to find out more about our workshops, register for them, and access
-          past workshop materials.
-        </p>
+        <h4>1- Problem</h4>
+          <p>
+            As it is known, life has come to a standstill due to the COVID-19 virus. In the first place, educational opportunities deteriorated. 
+            No matter how intertwined the students are with technology, they cannot use the devices they have efficiently. 
+            For this reason, the opportunities offered to students are not efficient.
+            If this problem is not prevented, we will regress rather than develop as long as COVID-19 continues.
+          </p>
+        <h4>2- Solution</h4>
+          <p>
+            Educatory is a personalized education tool. With a comprehensive Kindergarten-12th curriculum, personalized guidance, and real-time analytics, Educatory meets the unique needs of each student.
+          </p>
+          <p>
+            Educatory offers a learning method without rote learning. Not by watching videos or looking at the solution of questions, but by listening to Educatory's suggestions, students become focused and learn the subjects by getting rid of the memorization method.
+          </p>
+        <h4>3- Setup</h4>
+          <p>
+            Start a PHP web server and run the project.
+          </p>
+          <p>No additonal setup is required!</p>
       </>
     ),
     links: [
       {
         name: "GitHub",
-        link: "https://github.com/dscnustech/dscnustech.github.io",
+        link: "https://github.com/umuthopeyildirim/cubba",
       },
       {
         name: "Website",
-        link: "https://dscnustech.github.io/",
-      },
+        link: "https://educatory.ml/",
+      }
     ],
   },
   {
-    category: "Project",
-    title: "DigiCourse",
-    slug: "#digicourse",
-    imageUrl: "img/projects/digicourse.png",
-    subtitle: "A full-stack course platform with forum and enrolment features.",
-    period: "September to November 2019",
-    tech: "NodeJS, ExpressJS, PostgreSQL, Herokuapp",
+    category: "Mobile",
+    title: "APPINI: Transform Websites to Mobile Apps",
+    slug: "#appini",
+    imageUrl: "img/projects/appini.png",
+    subtitle: "Command Line Interface that generates mobile apps from responsive websites!", 
+    period: "Feb to Jan 2020",
+    tech: "Flutter, Python, Dart",
     team: [
       {
-        name: "Bryan Koh",
-        link: "https://github.com/awarenessxz/",
-      },
-      {
-        name: "Evan Tay",
-        link: "https://github.com/DigiPie/",
-      },
-      {
-        name: "Jacqueline Cheong",
-        link: "https://github.com/Aquarinte/",
-      },
-      {
-        name: "Lee Tze Ting",
-        link: "https://github.com/halcyoneee/",
-      },
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
     ],
     description: (
       <>
         <p>
-          A course management platform where student-teacher interactions can
-          take place seamlessly online.
+          Command Line Interface(CLI) that generates mobile apps from responsive websites.
         </p>
-        <p>
-          We worked on DigiCourse under National University of Singapore's{" "}
-          <a href="https://nusmods.com/modules/CS2102/database-systems">
-            CS2102: Database Systems
-          </a>
-          . It is a database-centric project which features two major
-          components, a course enrolment system, and a forum system.
-        </p>
-        <p>
-          DigiCourse is continuously deployed from Github to Herokuapp, with the
-          aid of Heroku build-packs such as the{" "}
-          <a href="https://github.com/DigiPie/psql-heroku-buildpack">
-            psql-heroku-buildpack
-          </a>
-          . I wrote this build pack to automate the execution of a PostgreSQL
-          setup script file on deployment to Heroku.
-        </p>
+        <h4>Installation</h4>
+        <p>Installation is very simple <code>$ pip install appini</code>, also check out flutter installation guide <a href="https://docs.flutter.dev/get-started/install" target="_blank">from here!</a></p>
+        <h4>Usage</h4>
+        <p>After installation, you can use <code>$ appini</code> command in your terminal. You can also use <code>$ appini --help</code> to see all the options.</p>
       </>
     ),
     links: [
       {
         name: "GitHub",
-        link: "https://github.com/DigiPie/DigiCourse",
+        link: "https://github.com/umuthopeyildirim/cubba",
       },
     ],
   },
   {
-    category: "Project",
-    title: "Dynalite",
-    slug: "#dynalite",
-    imageUrl: "img/projects/dynalite.png",
-    subtitle: "A full-stack IoT occupancy visualisation app.",
-    period: "September to November 2019",
-    tech:
-      "Raspberry-Pi, Python, COAP, NodeJS, ExpressJS, PostgreSQL, ReactJS, Docker",
+    category: "IoT",
+    title: "CUBBA: Pothole Detection System",
+    slug: "#cubba",
+    imageUrl: "img/projects/cubba.png",
+    subtitle: "Dedect potholes with raspberry pi and camera!", 
+    period: "Feb to Jul 2020",
+    tech: "Raspberry Pi, Python, OpenCV, TensorFlow, NumPy",
     team: [
       {
-        name: "Evan Tay",
-        link: "https://github.com/DigiPie/",
-      },
-      {
-        name: "Joyce Yeo",
-        link: "https://github.com/pikulet/",
-      },
-      {
-        name: "Matthew Lee",
-        link: "https://github.com/crazoter/",
-      },
-      {
-        name: "Melodies Sim",
-        link: "https://github.com/Happytreat/",
-      },
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
     ],
     description: (
       <>
-        <p>
-          Dynalite is an Internet-of-Things application which performs dynamic
-          visualisation of room occupancy.
-        </p>
-        <p>
-          We worked on Dynalite under National University of Singapore's{" "}
-          <a href="https://nusmods.com/modules/CS3103/computer-networks-practice">
-            CS3103: Computer Networks Practice
-          </a>
-          . It is an Internet-of-Things application which performs dynamic
-          visualisation of room occupancy.
-        </p>
-        <p>
-          Dynalite was built using 3 Docker containers and 1 Raspberry Pi. The
-          RPi reads light data and sends it via COAP to the first Docker
-          container containing a backend NodeJS-ExpressJS web server.
-        </p>
-        <p>
-          The backend server authenticates and stores the measurements into a
-          PostgreSQL database stored in the second Docker container.
-        </p>
-        <p>
-          The backend server also provides a HTTP REST API which is used by a
-          frontend React web server in the third Docker container.
-        </p>
+        <h4>1- Problem</h4>
+          <p>
+            Considering that we use the roads in the cities we live in, we all deal with potholes on a daily basis. 
+            Between 50% and 70% of the roads in big cities such as İstanbul, Ankara, İzmir and Adana are used in a damaged state. 
+            On average, slightly more than 50 thousand drivers a year in Turkey experience a problem related to potholes. 
+            It could be anything; puncture of the tire can lead to the bending of the rim and deterioration of the shock absorber. 
+            The financial cost of the repair of these damages reaches up to approximately 1 billion Turkish liras in Turkey. 
+            Beyond a financial hardship, potholes can cause a variety of accidents and problems even for the most experienced drivers. 
+            About one-fifth of the 7,000 annual traffic deaths are due to poor roads. 
+            Since the recycling rate of spare parts of these vehicles is less than 1%, the precaution that can be taken is to prevent these damages and losses.
+          </p>
+        <h4>2- Solution</h4>
+          <p>
+            Our solution is simple, thanks to the camera connected to the Raspberry Pi, the video of the vehicle is recorded along the way. 
+            Then this video is classified by deep learning. The detected pit is sent to the website along with the picture and GPS coordinate.
+          </p>
+          <p>
+            Then, when the pit is detected and approved, the road is connected to the municipality to repair the pit.
+            We report to the relevant department of the municipality. This system also analyzes the road defect and road condition and warns the municipality when it should be repaired. 
+            In this way, the municipality both saves money and minimizes material and moral damage to the environment.
+          </p>
+        <h4>3- How it works</h4>
+          <p>
+            After Raspberry Pi records the road image and gps coordinates, it splits the road image frame by frame into hours, minutes and seconds. Each frame is saved to the device as a picture.
+          </p>
+          <p>
+            Every image is converted to OpenCV format. Although Raspberry Pi is a very efficient computer. It's not a powerful computer. 
+            Two kinds of Computer Vision algorithms are used. These are commonly used in Image Classification and Object Detection. 
+            However, Object Detection is not strong enough to run on Raspberry Pi, I could get a maximum of 3-4 FPS. So I used Image Classification. 
+            I uploaded and marked my dataset with Azure Cognitive Services. After the model training is finished, Image Classification deep learning application can work with sample codes and Tensorflow documentation.
+          </p>
+        <h4>4- Setup</h4>
+          <p>
+            Follow the codes with Python3.
+          </p>
+          <code>
+            $ pip3 install -r requirements.txt
+          </code>
+          <br></br>
+          <code>
+            $ python3 main.py
+          </code>
+          
+        <h4><br></br>5- In the Future</h4>
+          <ul>
+            <li>The dataset is not very comprehensive, it covers Turkey's 2-4 km long street roads. So a larger dataset may be efficient.</li>
+            <li>It is possible to use a more powerful computer to increase the speed of the application.</li>
+            <li>Since I don't have a GPS device, even if I wrote the function, it needs to be rewritten and tested.</li>
+            <li>It's not a package software but can be translated easily. If it is production software, it can be coded as a startup as soon as the tool is running.</li>
+            <li>Main.py can be overhauled.</li>
+          </ul>
       </>
     ),
     links: [
       {
         name: "GitHub",
-        link: "https://github.com/DigiPie/dynalite",
+        link: "https://github.com/umuthopeyildirim/cubba",
       },
       {
-        name: "Presentation Slides (PDF)",
-        link: "https://evantay.com/pdf/dynalite.pdf",
-      },
-    ],
-  },
-  {
-    category: "Open Source Tool",
-    title: "psql-heroku-buildpack",
-    slug: "#psql-heroku-buildpack",
-    bgColor: "alternate",
-    subtitle: "A Heroku buildpack which executes a PostgreSQL script file",
-    period: "September 2019",
-    tech: "Herokuapp, PostgreSQL",
-    description: (
-      <>
-        <p>
-          psql-heroku-buildpack is a buildpack which executes a PostgreSQL
-          script file on deployment to Heroku.
-        </p>
-        <p>
-          I developed this buildpack while working on DigiCourse, a full-stack
-          application built on PostgreSQL. I wrote this build pack to automate
-          the execution of a PostgreSQL setup script file in the Git repo on
-          deployment to Heroku from Github.
-        </p>
-      </>
-    ),
-    links: [
-      {
-        name: "GitHub",
-        link: "https://github.com/DigiPie/psql-heroku-buildpack",
-      },
-    ],
-  },
-  {
-    category: "Project",
-    title: "BrainTrain",
-    slug: "#braintrain",
-    imageUrl: "img/projects/braintrain.png",
-    subtitle: "A spaced-repetition flashcard desktop app.",
-    period: "March to April 2019",
-    tech: "Java, JUnit5, JavaFx, OpenCSV",
-    team: [
-      {
-        name: "Evan Tay",
-        link: "https://github.com/DigiPie/",
-      },
-      {
-        name: "Eugene Foo",
-        link: "https://github.com/eugenefdw/",
-      },
-      {
-        name: "Lee Tze Ting",
-        link: "https://github.com/halcyoneee/",
-      },
-    ],
-    description: (
-      <>
-        <p>
-          BrainTrain is a spaced-repetition flashcard application which makes
-          memorizing easy and effective. With BrainTrain’s{" "}
-          <a href="https://www.theguardian.com/education/2016/jan/23/spaced-repetition-a-hack-to-make-your-brain-store-information">
-            Spaced Repetition System (SRS)
-          </a>{" "}
-          optimizing your flashcard revision intervals, you will be able to
-          learn more in less time.
-        </p>
-        <p>
-          <a
-            href="https://travis-ci.org/CS2103-AY1819S2-W14-1/main"
-            title="Build status"
-          >
-            <img src="https://travis-ci.org/CS2103-AY1819S2-W14-1/main.svg?branch=master" />
-          </a>{" "}
-          <a
-            href="https://ci.appveyor.com/project/eugenefdw/main"
-            title="Build status"
-          >
-            <img src="https://ci.appveyor.com/api/projects/status/vl6bo937loonr7x3?svg=true" />
-          </a>{" "}
-          <a
-            href="https://coveralls.io/github/CS2103-AY1819S2-W14-1/main?branch=master"
-            title="Coverage status"
-          >
-            <img src="https://coveralls.io/repos/github/CS2103-AY1819S2-W14-1/main/badge.svg?branch=master" />
-          </a>{" "}
-          <a
-            href="https://www.codacy.com/app/cs2103-w14-1/main?utm_source=github.com&utm_medium=referral&utm_content=CS2103-AY1819S2-w14-1/main&utm_campaign=Badge_Grade"
-            title="Codacy code quality"
-          >
-            <img src="https://api.codacy.com/project/badge/Grade/d236c7af6a71427ebeae2571add1f3f4" />
-          </a>
-        </p>
-        <p>
-          We worked on BrainTrain under National University of Singapore's{" "}
-          <a href="https://nusmods.com/modules/CS2103T/software-engineering">
-            CS2103T: Software Engineering
-          </a>
-          . My primary responsibility was to design and develop the Card
-          Management System. My secondary responsibility was to act as the
-          project’s documentation lead. To find out more, view my{" "}
-          <a href="https://digipie.github.io/BrainTrain/team/digipie.html">
-            project portfolio page
-          </a>
-          .
-        </p>
-      </>
-    ),
-    links: [
-      {
-        name: "GitHub",
-        link: "https://github.com/DigiPie/BrainTrain",
-      },
-      {
-        name: "Project documentation",
-        link: "https://digipie.github.io/BrainTrain/index.html",
-      },
-      {
-        name: "Project portfolio page",
-        link: "https://digipie.github.io/BrainTrain/team/digipie.html",
-      },
-    ],
-  },
-  {
-    category: "Game",
-    title: "Glory: Tales of Yi-Shun",
-    slug: "#glory",
-    imageUrl: "img/projects/glory.png",
-    subtitle: "A 2D hack-n-slash action game.",
-    period: "May to September 2018",
-    tech: "Unity, C#",
-    team: [
-      {
-        name: "Evan Tay",
-        link: "https://github.com/DigiPie/",
-      },
-      {
-        name: "Lim Xuan Hao",
-        link: "https://github.com/Lunastryke/",
-      },
-    ],
-    description: (
-      <>
-        <p>
-          In Glory, you play as Yi-Shun, the last remaining swordsman of the
-          great city of Sandosa. The undead warlord Ma Ti and his minions are
-          advancing on the city and only you can stop them.
-        </p>
-        <p>
-          We worked on this project under National University of Singapore's{" "}
-          <a href="http://nusskylab-dev.comp.nus.edu.sg/">
-            CP2106: Independent Software Development Project (Orbital){" "}
-          </a>
-          . This module was conducted during the summer break.
-        </p>
-        <p>
-          We were one of the top 11 out of 211 teams which received an award
-          (Honorable Mention), and a Google Chromecast each from Google
-          Singapore.
-        </p>
-      </>
-    ),
-    links: [
-      {
-        name: "GitHub",
-        link: "https://github.com/DigiPie/Glory",
-      },
-      {
-        name: "Itch.io (Download and Play)",
-        link: "https://digipie.itch.io/glory",
-      },
+        name: "Website",
+        link: "https://cubba-website.pages.dev/",
+      }
     ],
   },
 ];

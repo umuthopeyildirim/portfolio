@@ -157,7 +157,7 @@ const config = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorials',
+          label: 'Docs',
         },
         {
           to: 'blog', 
@@ -215,7 +215,7 @@ const config = {
               to: 'blog',
             },
             {
-              label: 'Tutorials',
+              label: 'Docs',
               to: 'docs/intro',
             },
             {
