@@ -100,6 +100,7 @@ const config = {
   themes: ['docusaurus-theme-search-typesense'],
   themeConfig:
   ({
+    image: 'img/umutyildirim.png',
     colorMode: {
       defaultMode: 'dark',
       respectPrefersColorScheme: true,
