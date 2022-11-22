@@ -79,6 +79,54 @@
   color: azure;
 }
 
+.aboutHeader {
+  background-color: var(--ifm-color-secondary-darker);
+  color: var(--ifm-color-secondary-lighter);
+  padding: 3.6rem 0 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.aboutHeader h2 {
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 3.6rem 1.2rem;
+}
+
+.aboutProfilePic {
+  border-radius: 5%;
+  max-height: 300px;
+}
+
+.aboutText {
+  max-width: 512px;
+}
+
+.aboutText a {
+  font-weight: bold;
+}
+
+.directory {
+  padding: 3.6rem 0.4rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 966px) {
+  .about {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 1024px) {
   .servers_wrapper {
     margin-top: 4rem;

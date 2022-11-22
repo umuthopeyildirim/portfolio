@@ -15,7 +15,7 @@ export default function Hero() {
               Full-stack Developer
             </h1>
             <p>
-              I like full-stack development. Also, I am interested in the cloud, computer vision and artificial intelligence.
+              I am a Software Engineer and Cloud Engineer passionate about solving meaningful problems.
             </p>
             <Link
               className={clsx(
