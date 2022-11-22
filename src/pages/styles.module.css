@@ -79,6 +79,23 @@
   color: azure;
 }
 
+.newsWrapper {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 2rem 0;
+}
+
+.newsInput{
+  margin-top: 1rem;
+  line-height: 1.5;
+  padding: calc(var(--ifm-button-padding-vertical))
+    calc(var(--ifm-button-padding-horizontal) / 2);
+  font-size: calc(0.875rem * var(--ifm-button-size-multiplier));
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-button-border-radius);
+  min-width: 25rem;
+  margin-right: 0.5rem;
+}
+
 @media (max-width: 1024px) {
   .servers_wrapper {
     margin-top: 4rem;

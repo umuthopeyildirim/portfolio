@@ -120,9 +120,6 @@
     text-decoration: none !important;
 }
 
-
-.contactUsBackground {}
-
 .contactUsResponse p {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -222,16 +219,14 @@ textarea {
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    line-height: 1.5;
+    padding: calc(var(--ifm-button-padding-vertical))
+      calc(var(--ifm-button-padding-horizontal) / 2);
+    font-size: calc(0.875rem * var(--ifm-button-size-multiplier));
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-button-border-radius);
+    min-width: 25rem;
+    margin-right: 0.5rem;
 }
 
 

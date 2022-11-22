@@ -10,67 +10,19 @@
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import Hero from "../components/Hero";
-
-const features = [
-  {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
 
 function Server(props) {
 	return (
 		<div className={styles.icon__wrapper}>
-			<img src={props.src} alt={props.name} title={props.name} className={styles.icon}/>
-			{ props.partner && <Partner/> }
+      <a href="/projects">
+        <img src={props.src} alt={props.name} title={props.name} className={styles.icon}/>
+        { props.partner && <Partner/> }
+      </a>
 		</div>
 	)
-}
-
-function Feature({imageUrl, title, description}) {
-  const imgUrl = useBaseUrl(imageUrl);
-  return (
-    <div className={clsx('col col--4', styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  );
 }
 
 export default function Home() {
@@ -84,30 +36,34 @@ export default function Home() {
       <section className={styles.servers_wrapper}>
         <h2>Projects</h2>
         <div className={styles.servers}>
-          <Server name="Pothole Finder" src="img/docusaurus.png"/>
-          <Server name="Pothole Finder" src="img/docusaurus.png"/>
-          <Server name="Pothole Finder" src="img/docusaurus.png"/>
-          <Server name="Pothole Finder" src="img/docusaurus.png"/>
-          <Server name="Pothole Finder" src="img/docusaurus.png"/>
+          <Server name="Markhope" src="img/projects_logo/markhope_logo-green.svg"/>
+          <Server name="MindGarden" src="img/projects_logo/mindgarden-logo-blue.svg"/>
+          <Server name="MyPassManager" src="img/projects_logo/mypassmanager-logo192.png"/>
+          <Server name="BoardiBoard" src="img/projects_logo/boardiboard.svg"/>
         </div>
       </section>
       <main>
-        {features && features.length > 0 && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row text--center">
-                {features.map(({title, imageUrl, description}) => (
-                  <Feature
-                    key={title}
-                    title={title}
-                    imageUrl={imageUrl}
-                    description={description}
-                  />
-                ))}
+        <div className={clsx("text-center p-4",styles.heroBanner)}  id="revue-embed">
+          <form action="http://newsteller.umutyildirim.com/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+            <h2>Subscribe to my newsletter</h2>
+            <p>Get my latest content by email. Unsubscribe at any time.</p>
+            <div>
+              <div class="revue-form-group">
+                <input className={styles.newsInput} placeholder="Your email address..." type="email" name="member[email]" id="member_email"></input>
+              </div>
+              <div class="revue-form-group">
+                <input className={styles.newsInput} placeholder="First name... (Optional)" type="text" name="member[first_name]" id="member_first_name"></input>
+              </div>
+              <div class="revue-form-group">
+                <input className={styles.newsInput} placeholder="Last name... (Optional)" type="text" name="member[last_name]" id="member_last_name"></input>
+              </div>
+              <div class="revue-form-actions">
+                <input className={clsx("button button--primary button--lg",styles.getStartedButton)} style={{marginTop:'1rem', marginBottom:'1rem'}} type="submit" value="Subscribe" name="member[subscribe]" id="member_submit"></input>
               </div>
             </div>
-          </section>
-        )}
+            <div class="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
+          </form>
+        </div>
       </main>
     </Layout>
   );
