@@ -134,6 +134,30 @@ const config = {
         name: 'docsearch:language_tag',
         content: 'en'
       },
+      {
+        name: 'twitter:card',
+        content: 'summary'
+      },
+      {
+        name: 'twitter:site',
+        content: '@umuthopeyildirim'
+      },
+      {
+        name: 'twitter:creator',
+        content: '@umuthopeyildirim'
+      },
+      {
+        name: 'twitter:title',
+        content: "Hope's Portfolio"
+      },
+      {
+        name: 'twitter:description',
+        content: 'Umut YILDIRIM\'s Portfolio Website'
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://umutyildirim.com/img/umutyildirim.png'
+      },
     ],
     navbar: {
       logo: {
