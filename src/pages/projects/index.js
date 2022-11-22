@@ -15,7 +15,10 @@ import {
   faGamepad,
   faLink,
   faTools,
+  faMicrochip,
   faUsers,
+  faMobile,
+  faFileContract
 } from "@fortawesome/free-solid-svg-icons";
 import { faChrome } from "@fortawesome/free-brands-svg-icons";
 
@@ -25,6 +28,12 @@ import projects from "../../data/_Projects";
 function CategoryIcon({ category, size = "1x" }) {
   let faIcon;
   switch (category) {
+    case "Smart Contract":
+      faIcon = faFileContract;
+      break;
+    case "Mobile":
+      faIcon = faMobile;
+      break;
     case "Project":
       faIcon = faFile;
       break;
@@ -36,6 +45,9 @@ function CategoryIcon({ category, size = "1x" }) {
       break;
     case "Game":
       faIcon = faGamepad;
+      break;
+    case "IoT":
+      faIcon = faMicrochip;
       break;
     default:
       faIcon = faFile;
@@ -85,14 +97,7 @@ function Projects() {
           <h1 className="hero__title">Projects</h1>
           <p className="hero__subtitle">These are the projects I worked on...</p>
           <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Check them out
-            </Link>
+
           </div>
         </div>
       </header>
@@ -221,7 +226,7 @@ function Projects() {
                     <ul>
                       {projectItem.links.map((link, i) => (
                         <li key={i}>
-                          <a href={link.link}>
+                          <a target="_blank" href={link.link}>
                             <FontAwesomeIcon alt="Link" icon={faLink} />{" "}
                             {link.name}
                           </a>
