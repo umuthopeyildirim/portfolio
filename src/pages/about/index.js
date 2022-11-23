@@ -127,7 +127,7 @@ export default function Home() {
                   <p>
                     ☁️ I'm open source and cloud-native enthusiast.{" "}<br />
                     🔥 Love Firebase and Google Cloud Platform.<br />
-                    Currently learning and studying Azure.
+                    Currently working on a project with Firebase and Cloudflare.
                   </p>
                 </div>
               </div>
