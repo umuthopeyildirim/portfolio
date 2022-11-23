@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="col col--6">
             <img
               className={styles.logo}
-              src={useBaseUrl("/img/hope.png")}
+              src={useBaseUrl("/img/hope.webp")}
               alt="Umut Hope YILDIRIM Logo"
             />
           </div>

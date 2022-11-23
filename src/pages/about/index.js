@@ -86,7 +86,8 @@ export default function Home() {
                 <div>
                   <img
                     className={styles.aboutProfilePic}
-                    src={useBaseUrl("img/hope.png")}
+                    src={useBaseUrl("img/hope.webp")}
+                    alt="Umut Hope YILDIRIM Logo"
                   />
                 </div>
                 <div class={styles.aboutText}>
@@ -126,7 +127,7 @@ export default function Home() {
                   <p>
                     ☁️ I'm open source and cloud-native enthusiast.{" "}<br />
                     🔥 Love Firebase and Google Cloud Platform.<br />
-                    Currently learning and studying Azure.
+                    Currently working on a project with Firebase and Cloudflare.
                   </p>
                 </div>
               </div>
