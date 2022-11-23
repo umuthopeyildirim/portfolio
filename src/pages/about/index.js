@@ -86,7 +86,8 @@ export default function Home() {
                 <div>
                   <img
                     className={styles.aboutProfilePic}
-                    src={useBaseUrl("img/hope.png")}
+                    src={useBaseUrl("img/hope.webp")}
+                    alt="Umut Hope YILDIRIM Logo"
                   />
                 </div>
                 <div class={styles.aboutText}>

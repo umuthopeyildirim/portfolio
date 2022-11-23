@@ -221,8 +221,12 @@ const config = {
           title: 'Support me',
           items: [
             {
-              html: '<a target="_blank" href="https://www.buymeacoffee.com/hope"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=hope&button_colour=215fc5&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>',
+              html: '<a href="https://www.producthunt.com/posts/hope-s-portfolio?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hope&#0045;s&#0045;portfolio" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=368405&theme=light" alt="Hope&#0039;s&#0032;Portfolio - My&#0032;own&#0032;personal&#0032;portfolio&#0044;&#0032;created&#0032;using&#0032;Docusaurus&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>',
             },
+            // I need to add my Stipe account to BuyMeACoffee. But I'm not US citizen so I can't do it.
+            // {
+            //   html: '<a target="_blank" href="https://www.buymeacoffee.com/hope"><img alt="BuyMeCoffee Button" src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=hope&button_colour=215fc5&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>',
+            // },
             {
               html: '<a href="https://twitter.com/hopesweaty?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @HopeSweaty</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
             },
