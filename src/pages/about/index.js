@@ -93,41 +93,38 @@ export default function Home() {
                 <div class={styles.aboutText}>
                   <h2>Hi</h2>
                   <p>
-                    🇹🇷 I am Umut YILDIRIM, a Full Stack Software Engineer based in Turkey.
+                    🇹🇷 My name is Umut YILDIRIM, and I am a Full Stack Software Engineer based in Turkey.
                   </p>
                   <p>
-                    🚀 I love building cool and meaningful things with tech like {" "}
+                    🚀 Whether it's {" "}
                     <Link to={useBaseUrl("projects/")}>
-                      websites, applications or games
+                      websites, apps, or IoT
                     </Link>
-                    .
+                    , I love building cool stuff with tech.
                   </p>
                   <p>
                     🌏 To me, coding is the closest thing to magic we have on Earth.
                   </p>
                   <p>
-                    👨‍💻 I have been writing beautiful code with my Raspberry Pi{" "}
-                    since 2016.
+                    👨‍💻  My Raspberry Pi has been helping me write beautiful code since 2016.
                   </p>
                   <p>
-                    🏆  We attended 10 hackathons and won 7 of them with my high school friends.
+                    🏆  In high school, my friends and I attended ten hackathons and won seven of them.
                   </p>
                   <p>
-                    🎒 I was a{" "} Computer Programing Associate Degree Student
-                    at the{" "}
+                    🎒 I was a Computer Programming Associate Degree Student at {" "}
                     <a href="https://www.isikun.edu.tr/international">
-                      Isik University 
+                      Isik University
                     </a>{" "}
                     from 2020 to 2022.
                   </p>
                   <p>
-                    🎒 I recently graduated from{" "} 
-                    <a href="https://flatironschool.com/">Flatiron School</a>{" "}  with Computer Science certificate.
+                    🎒 A certificate in Computer Science was recently awarded to me by <a href="https://flatironschool.com/">Flatiron School</a>.
                   </p>
                   <p>
-                    ☁️ I'm open source and cloud-native enthusiast.{" "}<br />
-                    🔥 Love Firebase and Google Cloud Platform.<br />
-                    Currently working on a project with Firebase and Cloudflare.
+                    ☁️ Cloud-native and open source are my passions.{" "}<br />
+                    🔥 I'm a big fan of Firebase and Google Cloud Platform..<br />
+                    At present, I am working on a Firebase and Cloudflare project.
                   </p>
                 </div>
               </div>

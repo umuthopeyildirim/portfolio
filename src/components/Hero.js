@@ -15,7 +15,7 @@ export default function Hero() {
               Full-stack Developer
             </h1>
             <p>
-              I am a Software Engineer and Cloud Engineer passionate about solving meaningful problems.
+              My profession is Software Engineer and Cloud Engineer, and I am passionate about solving meaningful problems in the Software Industry.
             </p>
             <Link
               className={clsx(

@@ -18,7 +18,7 @@ const projects = [
     description: (
       <>
         <p>
-          This is a Google Cloud function that can take screenshots of websites. It uses Puppateer to mimic a browser and take screenshots of websites. It is a serverless function that can be triggered by HTTP requests. 
+          I would like to point out that this is a Google Cloud function that can be used to take screenshots of websites. A Puppateer emulator is able to mimic the behavior of a browser and to take screenshots of websites using it. A serverless function is a function that can be invoked by HTTP requests and can be executed without requiring a server.
         </p>
         <h4>Deployment & Usage</h4>
         <p>
@@ -42,7 +42,7 @@ const projects = [
     title: "Markhope",
     slug: "#markhope",
     imageUrl: "img/projects/markhope.png",
-    subtitle: "MarkHope is a platform for sharing and discovering the best content on the web using markdown and Jekyll technology.", 
+    subtitle: "Using markdown and Jekyll technology, MarkHope enables people to share and discover the best content on the web.", 
     period: "6 Oct 2022 - 10 Oct 2022",
     tech: "Rails, Markdown, JavaScript, TailwindCSS, ReactJS, Ruby",
     team: [
@@ -54,7 +54,7 @@ const projects = [
     description: (
       <>
         <p>
-          MarkHope is a markdown hosting service. It's a simple way to host your markdown files on the web. This is a no-code application.
+          Using MarkHope, you can host your Markdown documents online. It's a simple way to host your Markdown files on the web. It is a no-code application that does not require any coding skills.
         </p>
         <h4>Deployment</h4>
         <ul>

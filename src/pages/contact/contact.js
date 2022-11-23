@@ -16,7 +16,7 @@ export function ContactForm() {
                     <h3 className={styles.contactTitle}><a href="https://open.spotify.com/track/58zsLZPvfflaiIbNWoA22O?si=3a358c16f55e42ac">I'm only human after all</a></h3>
                     <div className={styles.contactLimitContainer}>
                         <p className={styles.contactDetails}>
-                            Yes, you read my text right. If you have a question, please fill out the form below and I will get back to you as soon as possible.
+                            Yes, you have read my text correctly. Please complete the form below if you have any questions. I will contact you as soon as possible.
                         </p>
                     </div>
 
