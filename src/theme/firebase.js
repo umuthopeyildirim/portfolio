@@ -4,6 +4,7 @@ const { initializeAppCheck, ReCaptchaV3Provider } = require("firebase/app-check"
 import { getPerformance } from "firebase/performance";
 import { getMessaging, getToken } from "firebase/messaging";
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import { inject } from '@vercel/analytics';
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_APIKEY,
@@ -18,6 +19,7 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 
 if (ExecutionEnvironment.canUseDOM) {
+  inject();
   const analytics = getAnalytics(app);
   const perf = getPerformance(app);
   const appCheck = initializeAppCheck(app, {

@@ -44,24 +44,24 @@ export default function Home() {
       </section>
       <main>
         <div className={clsx("text-center p-4",styles.heroBanner)}  id="revue-embed">
-          <form action="http://newsteller.umutyildirim.com/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+          <form action="https://newsteller.umutyildirim.com/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
             <h2>Subscribe to my newsletter</h2>
             <p>Get my latest content by email. Unsubscribe at any time.</p>
             <div>
-              <div class="revue-form-group">
+              <div className="revue-form-group">
                 <input className={styles.newsInput} placeholder="Your email address..." type="email" name="member[email]" id="member_email"></input>
               </div>
-              <div class="revue-form-group">
+              <div className="revue-form-group">
                 <input className={styles.newsInput} placeholder="First name... (Optional)" type="text" name="member[first_name]" id="member_first_name"></input>
               </div>
-              <div class="revue-form-group">
+              <div className="revue-form-group">
                 <input className={styles.newsInput} placeholder="Last name... (Optional)" type="text" name="member[last_name]" id="member_last_name"></input>
               </div>
-              <div class="revue-form-actions">
+              <div className="revue-form-actions">
                 <input className={clsx("button button--primary button--lg",styles.getStartedButton)} style={{marginTop:'1rem', marginBottom:'1rem'}} type="submit" value="Subscribe" name="member[subscribe]" id="member_submit"></input>
               </div>
             </div>
-            <div class="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
+            <div className="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
           </form>
         </div>
       </main>
