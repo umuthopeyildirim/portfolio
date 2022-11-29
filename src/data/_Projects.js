@@ -238,7 +238,7 @@ const projects = [
     links: [
       {
         name: "GitHub",
-        link: "https://github.com/umuthopeyildirim/cubba",
+        link: "https://github.com/umuthopeyildirim/educatory",
       },
       {
         name: "Website",
@@ -274,7 +274,7 @@ const projects = [
     links: [
       {
         name: "GitHub",
-        link: "https://github.com/umuthopeyildirim/cubba",
+        link: "https://github.com/umuthopeyildirim/appini",
       },
     ],
   },
