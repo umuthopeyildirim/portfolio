@@ -267,11 +267,7 @@ const config = {
             {
               label: 'My Resume',
               href: 'https://umutyildirim.com/download/resume.pdf',
-            },
-            {
-              label: 'My CV',
-              href: 'https://umutyildirim.com/download/cv.pdf',
-            },
+            }
           ],
         },
         {
