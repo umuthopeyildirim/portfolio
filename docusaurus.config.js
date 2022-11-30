@@ -266,7 +266,7 @@ const config = {
             },
             {
               label: 'My Resume',
-              href: 'https://umutyildirim.com/download/resume.pdf',
+              href: '/download/resume.pdf',
             }
           ],
         },
