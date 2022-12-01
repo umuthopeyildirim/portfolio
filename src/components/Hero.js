@@ -12,10 +12,9 @@ export default function Hero() {
           <div className="col col--6">
             <h1>
               Hi. I'm <span className={styles.highlight}>Umut YILDIRIM</span><br />
-              Full-stack Developer
             </h1>
             <p>
-              My profession is Software Engineer and Cloud Engineer, and I am passionate about solving meaningful problems in the Software Industry.
+              I'm a Software Engineer and Cloud Engineer by day, and a problem-solving wizard by night! I absolutely love using my coding powers to tackle meaningful challenges in the Software Industry, and I always aim to make a positive impact with my work. Plus, it's pretty much the closest thing to magic I'll ever experience.
             </p>
             <Link
               className={clsx(

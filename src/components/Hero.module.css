@@ -1,48 +1,57 @@
 .hero {
-    display: flex;
-    padding: 4rem 0;
-    text-align: center;
-    align-items: center;
-    vertical-align: center;
-    position: relative;
-    /* background: #f9f9f9; */
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    /* padding-bottom: 1rem; */
-  }
+  display: flex;
+  padding: 4rem 0;
+  text-align: center;
+  align-items: center;
+  vertical-align: center;
+  position: relative;
+  /* background: #f9f9f9; */
+}
 
-  .center-please {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  
-  .getStartedButton {
-    margin-right: 0.6rem;
-  }
-  
-  .githubIcon {
-    vertical-align: middle;
-    height: 1rem;
-  }
-  
-  .githubButtonText {
-    vertical-align: middle;
-  }
-  
-  .logo {
-    border-radius: 50%;
-    width: 17rem;
-    height: 17rem;
-  }
+.hero h1 {
+  font-size: 3rem;
+  /* padding-bottom: 1rem; */
+}
 
-  .highlight {
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(270deg,#0054ad 0,#b8fb3c);
-    background-clip: text;
-    -webkit-background-clip: text;
+.center-please {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.getStartedButton {
+  margin-right: 0.6rem;
+}
+
+.githubIcon {
+  vertical-align: middle;
+  height: 1rem;
+}
+
+.githubButtonText {
+  vertical-align: middle;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 17rem;
+  height: 17rem;
+  margin-top: 10px;
+}
+
+.highlight {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(270deg, #0054ad 0, #b8fb3c);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@media (max-width: 728px) {
+  .logo{
+    margin-top: 15px;
   }
+}

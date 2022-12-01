@@ -15,53 +15,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-const features = [
-  {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
-
-function Feature({imageUrl, title, description}) {
-  const imgUrl = useBaseUrl(imageUrl);
-  return (
-    <div className={clsx('col col--4', styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  );
-}
 
 export default function Home() {
   const context = useDocusaurusContext();
@@ -79,7 +32,6 @@ export default function Home() {
         </div>
       </header>
       <main>
-        {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
               <div className={styles.about}>
@@ -91,46 +43,45 @@ export default function Home() {
                   />
                 </div>
                 <div class={styles.aboutText}>
-                  <h2>Hi</h2>
+                  <h2>Hello there,</h2>
                   <p>
                     🇹🇷 My name is Umut YILDIRIM, and I am a Full Stack Software Engineer based in Turkey.
                   </p>
                   <p>
-                    🚀 Whether it's {" "}
+                    🚀 My passion is building cool stuff with technology, {" "}
+                    regardless of whether it is {" "}
                     <Link to={useBaseUrl("projects/")}>
-                      websites, apps, or IoT
+                      websites, apps, or the Internet of Things.
                     </Link>
-                    , I love building cool stuff with tech.
                   </p>
                   <p>
-                    🌏 To me, coding is the closest thing to magic we have on Earth.
+                    🌏 There is no doubt that coding is the closest thing we have on this planet to magic, at least to me.
                   </p>
                   <p>
-                    👨‍💻  My Raspberry Pi has been helping me write beautiful code since 2016.
+                    👨‍💻 Since 2016, I have been using my Raspberry Pi as a tool to help me write beautiful code.
                   </p>
                   <p>
-                    🏆  In high school, my friends and I attended ten hackathons and won seven of them.
+                    🏆 When I was in high school, my friends and I participated in ten hackathons, and we won seven of them.
                   </p>
                   <p>
-                    🎒 I was a Computer Programming Associate Degree Student at {" "}
+                    🎒 During my time at {" "}
                     <a href="https://www.isikun.edu.tr/international">
-                      Isik University
+                      Isik University 
                     </a>{" "}
-                    from 2020 to 2022.
+                    from 2020 to 2022, I was a student of the Computer Programming Associate Degree program.
                   </p>
                   <p>
-                    🎒 A certificate in Computer Science was recently awarded to me by <a href="https://flatironschool.com/">Flatiron School</a>.
+                    🎒 The <a href="https://flatironschool.com/">Flatiron School</a> recently awarded me a certificate in Computer Science as part of its Computer Science program.
                   </p>
                   <p>
-                    ☁️ Cloud-native and open source are my passions.{" "}<br />
-                    🔥 I'm a big fan of Firebase and Google Cloud Platform..<br />
-                    At present, I am working on a Firebase and Cloudflare project.
+                    ☁️ I am passionate about cloud-native technologies and open source software.{" "}<br />
+                    🔥 I am a huge fan of Google Cloud Platform and Firebase.<br />
+                    At the moment, I am working on a Firebase and Cloudflare project that I am very excited about.
                   </p>
                 </div>
               </div>
             </div>
           </section>
-        )}
       </main>
     </Layout>
   );
