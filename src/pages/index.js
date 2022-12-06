@@ -44,7 +44,7 @@ export default function Home() {
       </section>
       <main>
         <div className={clsx("text-center p-4",styles.heroBanner)}  id="revue-embed">
-          <form action="https://newsteller.umutyildirim.com/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+          <form action="https://www.getrevue.co/profile/umuthopeyildirim/" method="post" id="revue-form" name="revue-form"  target="_blank">
             <h2>Subscribe to my newsletter</h2>
             <p>Get my latest content by email. Unsubscribe at any time.</p>
             <div>
