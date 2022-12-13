@@ -91,7 +91,7 @@ const projects = [
     title: "MindGarden",
     slug: "#mindgarden",
     imageUrl: "img/projects/mindgarden.png",
-    subtitle: "MindGarden is an dairy writing software, but you can also express your feelings on your dairies.", 
+    subtitle: "MindGarden is an diary writing software, but you can also express your feelings on your diaries.", 
     period: "6 Oct 2022 - 10 Oct 2022",
     tech: "Sinatra, JavaScript, TailwindCSS, ReactJS, Diary, Ruby",
     team: [
