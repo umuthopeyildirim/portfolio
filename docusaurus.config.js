@@ -289,6 +289,10 @@ const config = {
               label: 'Instagram',
               href: 'https://www.instagram.com/umuthopeyildirim/',
             },
+            {
+              label: 'mstodon.eu',
+              href: 'https://mstodon.eu/@hope',
+            },
           ],
         },
       ],
