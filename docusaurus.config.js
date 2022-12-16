@@ -291,6 +291,7 @@ const config = {
             },
             {
               label: 'mstodon.eu',
+              rel: 'me',
               href: 'https://mstodon.eu/@hope',
             },
           ],
