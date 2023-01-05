@@ -7,7 +7,7 @@ const projects = [
     slug: "#flatiron-open-source",
     imageUrl: "img/projects/flatiron-open-source.png",
     subtitle: "Flatiron School lessons for graduated students.", 
-    period: "21 Nov 2022",
+    period: "2 Dec 2023",
     tech: "JavaScript, Ruby, Python, computer-science, data-science, education, open-source",
     team: [
       {
