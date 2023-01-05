@@ -1,6 +1,47 @@
 import React from "react";
 
 const projects = [
+    {
+    category: "Website",
+    title: "Flatiron Open Source",
+    slug: "#flatiron-open-source",
+    imageUrl: "img/projects/flatiron-open-source.png",
+    subtitle: "Flatiron School lessons for graduated students.", 
+    period: "21 Nov 2022",
+    tech: "JavaScript, Ruby, Python, computer-science, data-science, education, open-source",
+    team: [
+      {
+        name: "Umut Hope YILDIRIM",
+        link: "https://github.com/umuthopeyildirim/",
+      }
+    ],
+    description: (
+      <>
+        <p>
+          Flatiron School Open Source is a hub for bootcamp graduates to have efficient access to course modules, lessons, and data. Use the app as a refresher, learn something new, or get ready for interviews.
+        </p>
+        <p>
+          Software Engineering, Data Science, and Data Structures & Algorithms are curently available. Product Design and Cybersecurity will be released in the near future.
+        </p>
+        <h4>Deployment & Usage</h4>
+        <p>
+          To use this repo you need to install <a href="https://nodejs.org/en/" target="_blank">node</a> and <a href="https://yarnpkg.com/" target="_blank">yarn</a>. Once you have those installed, you can run the following commands to start the server:
+          <br></br><code>yarn</code>
+          <br></br><code>yarn dev</code>
+        </p>
+      </>
+    ),
+    links: [
+      {
+        name: "GitHub",
+        link: "https://github.com/umuthopeyildirim/FlatironSchoolOpenSource",
+      },
+      {
+        name: "Website",
+        link: "https://flatironopensource.ml"
+      }
+    ],
+  },
   {
     category: "Open Source Tool",
     title: "Puppateer Screenshot",
