@@ -1,6 +1,6 @@
 
 hidden = [".config"]
-run = "yarn && yarn start --host 0.0.0.0"
+run = "yarn start --host 0.0.0.0"
 
 [[hints]]
 regex = "Error \\[ERR_REQUIRE_ESM\\]"
@@ -75,3 +75,7 @@ pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
 
 [languages.javascript.languageServer]
 start = "typescript-language-server --stdio"
+
+[auth]
+pageEnabled = false
+buttonEnabled = true
