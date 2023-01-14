@@ -52,7 +52,7 @@ const config = {
           {
             tagName: 'link',
             rel: 'icon',
-            href: '/img/docusaurus.png',
+            href: '/img/icons/maskable_icon_x512.png',
           },
           {
             tagName: 'link',
