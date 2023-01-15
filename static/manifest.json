@@ -5,7 +5,7 @@
   "background_color": "#424242",
   "display": "standalone",
   "scope": "./",
-  "start_url": "./",
+  "start_url": "./index.html",
   "related_applications": [
     {
       "platform": "webapp",
@@ -13,6 +13,11 @@
     }
   ],
   "icons": [
+    {
+      "src": "img/icons/maskable_icon-x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
     {
       "src": "img/icons/maskable_icon-x72.png",
       "sizes": "72x72",
@@ -26,16 +31,6 @@
     {
       "src": "img/icons/maskable_icon-x128.png",
       "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "img/icons/maskable_icon-x144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "img/icons/maskable_icon-x152.png",
-      "sizes": "152x152",
       "type": "image/png"
     },
     {
