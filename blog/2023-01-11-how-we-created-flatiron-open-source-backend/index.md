@@ -22,7 +22,9 @@ Once you add your domain you will be given 2 nameserver addresses. You need to a
 ![Cloudflare Nameserver](./images/freenom-nameserver.png)
 You need to copy your Cloudflare nameservers and paste them into the Freenom nameserver textboxes, and then click the **Change Nameservers** button. 
 Once you click the **update** button, the process can take up to 20 minutes to complete. Once Cloudflare finishes the setup, you will recieve an email congratulating you on setting up your first domain.
-
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-6517221663935477">
+</amp-auto-ads>
 ## Step 3: Cloudflare Pages Setup
 Cloudflare Pages allows you to deploy your dynamic front-end applications. The platform is super fast, and is always up to date by deploying directly from your Git provider (this assumes you have a [github](https://github.com/) account).
 

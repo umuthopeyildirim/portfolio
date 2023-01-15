@@ -44,6 +44,11 @@ const config = {
       src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6517221663935477",
       crossorigin: "anonymous",
     },
+    {
+      src: "https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js",
+      async: true,
+      customElement: "amp-auto-ads",
+    }
   ],
   plugins: [
     [
@@ -71,6 +76,14 @@ const config = {
             content: 'rgb(37, 194, 160)',
           },
         ],
+      },
+    ],
+    [
+      'docusaurus-plugin-content-gists',
+      {
+        enabled: true,
+        verbose: false,
+        personalAccessToken: process.env.GH_PERSONAL_ACCESS_TOKEN,
       },
     ],
     [
@@ -280,6 +293,10 @@ const config = {
               {
                 label: 'My Resume',
                 href: 'resume',
+              },
+              {
+                label: 'Privacy Policy',
+                href: 'privacy',
               },
               {
                 label: 'Contact Me',
