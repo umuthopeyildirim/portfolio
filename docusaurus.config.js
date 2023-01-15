@@ -38,6 +38,13 @@ const config = {
     cloudMessagingVapidKey: process.env.FIREBASE_CLOUDMESSAGINGVAPIDKEY,
     reCaptchaV3SiteKey: process.env.RECAPTCHA_V3_SITEKEY
   },
+  scripts: [
+    {
+      async: true,
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6517221663935477",
+      crossorigin: "anonymous",
+    },
+  ],
   plugins: [
     [
       '@docusaurus/plugin-pwa',
