@@ -272,12 +272,12 @@ const config = {
                 to: 'about',
               },
               {
-                label: 'Contact Me',
-                to: 'contact',
+                label: 'My Resume',
+                href: 'resume',
               },
               {
-                label: 'My Resume',
-                href: '/download/resume.pdf',
+                label: 'Contact Me',
+                to: 'contact',
               }
             ],
           },

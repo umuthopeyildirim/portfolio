@@ -16,7 +16,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 
-export default function Home() {
+export default function About() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
   return (
