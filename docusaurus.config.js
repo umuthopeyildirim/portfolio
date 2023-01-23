@@ -79,14 +79,6 @@ const config = {
       },
     ],
     [
-      'docusaurus-plugin-content-gists',
-      {
-        enabled: true,
-        verbose: false,
-        personalAccessToken: process.env.GH_PERSONAL_ACCESS_TOKEN,
-      },
-    ],
-    [
       '@docusaurus/plugin-google-analytics',
       {
         trackingID: 'G-EJ20S1YRG2',
@@ -136,7 +128,6 @@ const config = {
     ],
   ],
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-  themes: ['docusaurus-theme-search-typesense'],
   themeConfig:
     ({
       image: 'img/umutyildirim.png',
@@ -144,20 +135,10 @@ const config = {
         defaultMode: 'dark',
         respectPrefersColorScheme: true,
       },
-      typesense: {
-        typesenseCollectionName: 'hope-portfolio_1669069064', // Replace with your own doc site's name. Should match the collection name in the scraper settings.
-
-        typesenseServerConfig: {
-          nodes: [
-            {
-              host: 'a8vrziso260fc95hp-1.a1.typesense.net',
-              port: 443,
-              protocol: 'https',
-            },
-          ],
-          apiKey: process.env.TYPESENSE_READ_ONLY_API_KEY,
-        },
-        typesenseSearchParameters: {},
+      algolia: {
+        appId: 'O1HCJIY1QA',
+        apiKey: 'dce316bfcba2fc8ad1620201a57b953f',
+        indexName: 'umutyildirim',
         contextualSearch: true,
       },
       metadata: [
