@@ -189,14 +189,9 @@ const config = {
         },
         items: [
           {
-            to: 'about',
-            label: 'About Me',
+            to: 'blog',
+            label: 'Blogs',
             position: 'left'
-          },
-          {
-            to: 'projects',
-            label: 'Projects',
-            position: 'left',
           },
           {
             type: 'doc',
@@ -205,9 +200,9 @@ const config = {
             label: 'Docs',
           },
           {
-            to: 'blog',
-            label: 'Blogs',
-            position: 'left'
+            to: 'projects',
+            label: 'Projects',
+            position: 'left',
           },
           {
             to: 'contact',
@@ -251,10 +246,6 @@ const config = {
             title: 'Discover',
             items: [
               {
-                label: 'Projects',
-                to: 'projects',
-              },
-              {
                 label: 'Blog',
                 to: 'blog',
               },
@@ -262,15 +253,15 @@ const config = {
                 label: 'Docs',
                 to: 'docs/intro',
               },
+              {
+                label: 'Projects',
+                to: 'projects',
+              },
             ],
           },
           {
             title: 'Get To Know Me',
             items: [
-              {
-                label: 'About Me',
-                to: 'about',
-              },
               {
                 label: 'My Resume',
                 href: 'resume',

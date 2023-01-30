@@ -8,9 +8,10 @@
  */
 
 import React from 'react';
-import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import Hero from "../components/Hero";
 
@@ -36,34 +37,85 @@ export default function Home() {
       <section className={styles.servers_wrapper}>
         <h2>Projects</h2>
         <div className={styles.servers}>
-          <Server name="Markhope" src="img/projects_logo/markhope_logo-green.svg"/>
-          <Server name="MindGarden" src="img/projects_logo/mindgarden-logo-blue.svg"/>
-          <Server name="MyPassManager" src="img/projects_logo/mypassmanager-logo192.png"/>
-          <Server name="BoardiBoard" src="img/projects_logo/boardiboard.svg"/>
+          <Server
+            name="Markhope"
+            src="img/projects_logo/markhope_logo-green.svg"
+          />
+          <Server
+            name="MindGarden"
+            src="img/projects_logo/mindgarden-logo-blue.svg"
+          />
+          <Server
+            name="MyPassManager"
+            src="img/projects_logo/mypassmanager-logo192.png"
+          />
+          <Server name="BoardiBoard" src="img/projects_logo/boardiboard.svg" />
         </div>
       </section>
-      <main>
-        <div className={clsx("text-center p-4",styles.heroBanner)}  id="revue-embed">
-          <form action="https://www.getrevue.co/profile/umuthopeyildirim" method="post" id="revue-form" name="revue-form"  target="_blank">
-            <h2>Subscribe to my newsletter</h2>
-            <p>Get my latest content by email. Unsubscribe at any time.</p>
-            <div>
-              <div className="revue-form-group">
-                <input className={styles.newsInput} placeholder="Your email address..." type="email" name="member[email]" id="member_email"></input>
+      <main id="about">
+        <section className={styles.features}>
+          <div className="container">
+            <div className={styles.about}>
+              <div>
+                <img
+                  className={styles.aboutProfilePic}
+                  src={useBaseUrl('img/profile.webp')}
+                  alt="Umut Hope YILDIRIM Logo"
+                />
               </div>
-              <div className="revue-form-group">
-                <input className={styles.newsInput} placeholder="First name... (Optional)" type="text" name="member[first_name]" id="member_first_name"></input>
-              </div>
-              <div className="revue-form-group">
-                <input className={styles.newsInput} placeholder="Last name... (Optional)" type="text" name="member[last_name]" id="member_last_name"></input>
-              </div>
-              <div className="revue-form-actions">
-                <input className={clsx("button button--primary button--lg",styles.getStartedButton)} style={{marginTop:'1rem', marginBottom:'1rem'}} type="submit" value="Subscribe" name="member[subscribe]" id="member_submit"></input>
+              <div class={styles.aboutText}>
+                <h2>Hello there,</h2>
+                <p>
+                  🇹🇷 My name is Umut YILDIRIM, and I am a Full Stack Software
+                  Engineer based in Turkey.
+                </p>
+                <p>
+                  🚀 My passion is building cool stuff with technology,{' '}
+                  regardless of whether it is{' '}
+                  <Link to={useBaseUrl('projects/')}>
+                    websites, apps, or the Internet of Things.
+                  </Link>
+                </p>
+                <p>
+                  🌏 There is no doubt that coding is the closest thing we have
+                  on this planet to magic, at least to me.
+                </p>
+                <p>
+                  👨‍💻 Since 2016, I have been using my Raspberry Pi as a tool to
+                  help me write beautiful code.
+                </p>
+                <p>
+                  🏆 When I was in high school, my friends and I participated in
+                  ten hackathons, and we won seven of them.
+                </p>
+                <p>
+                  🎒 During my time at{' '}
+                  <a href="https://www.isikun.edu.tr/international">
+                    Isik University
+                  </a>{' '}
+                  from 2020 to 2022, I was a student of the Computer Programming
+                  Associate Degree program.
+                </p>
+                <p>
+                  🎒 The{' '}
+                  <a href="https://flatironschool.com/">Flatiron School</a>{' '}
+                  recently awarded me a certificate in Computer Science as part
+                  of its Computer Science program.
+                </p>
+                <p>
+                  ☁️ I am passionate about cloud-native technologies and open
+                  source software. <br />
+                  🔥 I am a huge fan of Google Cloud Platform and Firebase.
+                  <br />
+                  At the moment, I am working on a Firebase and Cloudflare
+                  project that I am very excited about.
+                </p>
               </div>
             </div>
-            <div className="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank" href="https://www.getrevue.co/terms">Terms of Service</a> and <a target="_blank" href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
-          </form>
-        </div>
+          </div>
+        </section>
+        <section className={styles.features}>
+        </section>
       </main>
     </Layout>
   );

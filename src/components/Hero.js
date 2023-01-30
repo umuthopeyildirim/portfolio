@@ -21,7 +21,7 @@ export default function Hero() {
                 "button button--primary button--lg",
                 styles.getStartedButton
               )}
-              to="/about"
+              to="/#about"
             >
               About Me
             </Link>
@@ -40,7 +40,7 @@ export default function Hero() {
           <div className="col col--6">
             <img
               className={styles.logo}
-              src={useBaseUrl("/img/hope.webp")}
+              src={useBaseUrl("/img/profile.webp")}
               alt="Umut Hope YILDIRIM Logo"
             />
           </div>
