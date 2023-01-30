@@ -79,10 +79,9 @@ const config = {
       },
     ],
     [
-      '@docusaurus/plugin-google-analytics',
+      '@docusaurus/plugin-google-tag-manager',
       {
-        trackingID: 'G-EJ20S1YRG2',
-        anonymizeIP: false,
+        containerId: 'G-EJ20S1YRG2',
       },
     ],
     [
