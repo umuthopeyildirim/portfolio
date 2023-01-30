@@ -38,6 +38,10 @@ export default function Home() {
         <h2>Projects</h2>
         <div className={styles.servers}>
           <Server
+            name="Flatiron Open Source"
+            src="img/projects_logo/flatironopensource.webp"
+          />
+          <Server
             name="Markhope"
             src="img/projects_logo/markhope_logo-green.svg"
           />
@@ -49,7 +53,10 @@ export default function Home() {
             name="MyPassManager"
             src="img/projects_logo/mypassmanager-logo192.png"
           />
-          <Server name="BoardiBoard" src="img/projects_logo/boardiboard.svg" />
+          <Server 
+            name="BoardiBoard"
+            src="img/projects_logo/boardiboard.svg"
+          />
         </div>
       </section>
       <main id="about">
