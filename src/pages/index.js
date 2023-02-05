@@ -70,7 +70,7 @@ export default function Home() {
                   alt="Umut Hope YILDIRIM Logo"
                 />
               </div>
-              <div class={styles.aboutText}>
+              <div className={styles.aboutText}>
                 <h2>Hello there,</h2>
                 <p>
                   🇹🇷 My name is Umut YILDIRIM, and I am a Full Stack Software

@@ -79,6 +79,14 @@ const config = {
       },
     ],
     [
+      'docusaurus-plugin-content-gists',
+      {
+        enabled: true,
+        verbose: false,
+        personalAccessToken: process.env.GH_PERSONAL_ACCESS_TOKEN,
+      },
+    ],
+    [
       '@docusaurus/plugin-google-tag-manager',
       {
         containerId: 'G-EJ20S1YRG2',
