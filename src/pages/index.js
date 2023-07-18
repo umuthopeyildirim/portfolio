@@ -38,6 +38,10 @@ export default function Home() {
         <h2>Projects</h2>
         <div className={styles.servers}>
           <Server
+            name="Mirage Vision Renderer"
+            src="img/projects_logo/mirage-vision-renderer.png"
+          />
+          <Server
             name="Flatiron Open Source"
             src="img/projects_logo/flatironopensource.webp"
           />

@@ -1,6 +1,51 @@
+/* eslint-disable react/no-unescaped-entities */
+// eslint-disable-next-line header/header
 import React from "react";
 
 const projects = [
+    {
+      category: "Website",
+      title: "Mirage Renderer",
+      slug: "#mirage-vision-renderer",
+      imageUrl: "img/projects/mirage-vision-renderer.png",
+      subtitle: "Precisely annotated synthetic image data solves cold start problems, increases existing training data's efficiency, covers edge cases and reduces development time and cost.", 
+      period: "18 July 2023",
+      tech: "JavaScript, Unity, Next.js, React, AWS, Supabase, Image Generation, Data Science, TailwindCSS, FloatUI, DaisyUI, Synthetic Dataset Generation",
+      team: [
+        {
+          name: "Umut Hope YILDIRIM",
+          link: "https://github.com/umuthopeyildirim/",
+        }
+      ],
+      description: (
+        <>
+          <p>
+            Mirage Vision Renderer is a powerful cloud-based service designed to generate high-quality synthetic data using advanced algorithms and cutting-edge technology. It offers a convenient solution for creating large volumes of data required for machine learning, computer vision, and various other applications, eliminating the need for manual collection and annotation.
+          </p>
+          <h4>Features</h4>
+          <p>
+            User-Friendly Interface: Mirage Vision Renderer offers an intuitive and user-friendly interface, ensuring a seamless experience for users of all levels of expertise. Generating high-quality synthetic data has never been easier.
+          </p>
+          <p>
+            Unity Integration: The Mirage Vision Renderer provides a dedicated Unity package that facilitates seamless integration with Unity applications. This integration allows users to utilize their custom rendering pipelines with Mirage Rendering, enabling a wide range of possibilities.
+          </p>
+        </>
+      ),
+      links: [
+        {
+          name: "Website",
+          link: "https://mirage.vision"
+        },
+        {
+          name: "Portal",
+          link: "https://app.mirage.vision",
+        },
+        {
+          name: "Documentation",
+          link: "https://docs.mirage.vision",
+        },
+      ],
+    },
     {
     category: "Website",
     title: "Flatiron Open Source",
@@ -8,7 +53,7 @@ const projects = [
     imageUrl: "img/projects/flatiron-open-source.png",
     subtitle: "Flatiron School lessons for graduated students.", 
     period: "2 Jan 2023",
-    tech: "JavaScript, Ruby, Python, computer-science, data-science, education, open-source",
+    tech: "JavaScript, Ruby, Python, computer-science, Data Science, Education, Open Source",
     team: [
       {
         name: "Umut Hope YILDIRIM",
@@ -25,7 +70,7 @@ const projects = [
         </p>
         <h4>Deployment & Usage</h4>
         <p>
-          To use this repo you need to install <a href="https://nodejs.org/en/" target="_blank">node</a> and <a href="https://yarnpkg.com/" target="_blank">yarn</a>. Once you have those installed, you can run the following commands to start the server:
+          To use this repo you need to install <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">node</a> and <a href="https://yarnpkg.com/" target="_blank" rel="noreferrer">yarn</a>. Once you have those installed, you can run the following commands to start the server:
           <br></br><code>yarn</code>
           <br></br><code>yarn dev</code>
         </p>
@@ -191,7 +236,7 @@ const projects = [
         <code>yarn install && yarn start</code>
         
         <h4><br></br>Deployment</h4>
-        <p>You can deploy this website using Firebase Hosting easily. Just use Firebase Hosting <a target="_blank" href="https://firebase.google.com/docs/hosting">documentation</a>. </p>
+        <p>You can deploy this website using Firebase Hosting easily. Just use Firebase Hosting <a target="_blank" href="https://firebase.google.com/docs/hosting" rel="noreferrer">documentation</a>. </p>
       </>
     ),
     links: [
@@ -307,7 +352,7 @@ const projects = [
           Command Line Interface(CLI) that generates mobile apps from responsive websites.
         </p>
         <h4>Installation</h4>
-        <p>Installation is very simple <code>$ pip install appini</code>, also check out flutter installation guide <a href="https://docs.flutter.dev/get-started/install" target="_blank">from here!</a></p>
+        <p>Installation is very simple <code>$ pip install appini</code>, also check out flutter installation guide <a href="https://docs.flutter.dev/get-started/install" target="_blank" rel="noreferrer">from here!</a></p>
         <h4>Usage</h4>
         <p>After installation, you can use <code>$ appini</code> command in your terminal. You can also use <code>$ appini --help</code> to see all the options.</p>
       </>
