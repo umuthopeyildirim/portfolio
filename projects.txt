@@ -1,0 +1,72 @@
+1. **Mirage Renderer**
+   - Category: Website
+   - Description: Mirage Vision Renderer is a powerful cloud-based service designed to generate high-quality synthetic data using advanced algorithms and cutting-edge technology. It offers a convenient solution for creating large volumes of data required for machine learning, computer vision, and various other applications, eliminating the need for manual collection and annotation.
+   - Features: User-Friendly Interface and Unity Integration
+   - Tech: JavaScript, Unity, Next.js, React, AWS, Supabase, Image Generation, Data Science, TailwindCSS, FloatUI, DaisyUI, Synthetic Dataset Generation
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [Website](https://mirage.vision), [Portal](https://app.mirage.vision), [Documentation](https://docs.mirage.vision)
+
+2. **Flatiron Open Source**
+   - Category: Website
+   - Description: Flatiron School Open Source is a hub for bootcamp graduates to have efficient access to course modules, lessons, and data. Use the app as a refresher, learn something new, or get ready for interviews. Software Engineering, Data Science, and Data Structures & Algorithms are currently available, with Product Design and Cybersecurity to be released in the near future.
+   - Tech: JavaScript, Ruby, Python, computer-science, Data Science, Education, Open Source
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [GitHub](https://github.com/umuthopeyildirim/FlatironSchoolOpenSource), [Website](https://flatironopensource.ml)
+
+3. **Puppateer Screenshot**
+   - Category: Open Source Tool
+   - Description: This is a Google Cloud function that can be used to take screenshots of websites. A Puppeteer emulator is able to mimic the behavior of a browser and take screenshots of websites using it. A serverless function is a function that can be invoked by HTTP requests and can be executed without requiring a server.
+   - Tech: JavaScript, Google Cloud Storage, Google Cloud Functions, Puppeteer
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [GitHub](https://github.com/umuthopeyildirim/puppateer-screenshot), [Blog](/blog/building-a-website-screenshot-api-with-puppeteer-and-google-cloud-functions)
+
+4. **Markhope**
+   - Category: Website
+   - Description: Using MarkHope, you can host your Markdown documents online. It's a simple way to host your Markdown files on the web. It is a no-code application that does not require any coding skills.
+   - Tech: Rails, Markdown, JavaScript, TailwindCSS, ReactJS, Ruby
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [GitHub](https://github.com/umuthopeyildirim/markhope), [Website](https://markhope.ml), [Docs](/docs/category/markhope)
+
+5. **MindGarden**
+   - Category: Website
+   - Description: This project focuses on developing a Sinatra API backend that makes use of Active Record to access and store data in a database. This database is accessed and stored by a separate React frontend that uses the API to communicate with the database.
+   - Tech: Sinatra, JavaScript, TailwindCSS, ReactJS, Diary, Ruby
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [GitHub](https://github.com/umuthopeyildirim/mindgarden), [Website](https://mindgarden.ml)
+
+6. **MyPassManager**
+   - Category: Website
+   - Description: MyPass Manager is a simple password manager that uses the MyPass API to store your passwords.
+   - Tech: Firebase, JavaScript, TailwindCSS, ReactJS, Password Manager
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [GitHub](https://github.com/umuthopeyildirim/mypassmanager), [Website](https://mypassmanager.ml)
+
+7. **Decentralized Todo**
+   - Category: Smart Contract
+   - Description: This contract can be used to add, delete, and mark items on your todo list. It runs on the Near blockchain and is written in TypeScript, JavaScript, and Shell.
+   - Tech: TypeScript, JavaScript, Shell
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [GitHub](https://github.com/umuthopeyildirim/decentralized-todo)
+
+8. **Educatory: Personalized Educational Tool**
+   - Category: Website
+   - Description: Educatory is a personalized educational tool with a comprehensive Kindergarten-12th grade curriculum, personalized guidance, and real-time analytics to meet the unique needs of each student.
+   - Tech: PHP, MySQL
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [GitHub](https://github.com/umuthopeyildirim/educatory), [Website](https://educatory.ml/)
+
+9. **APPINI: Transform Websites to Mobile Apps**
+   - Category: Mobile
+   - Description: APPINI is a Command Line Interface (CLI) that generates mobile apps from responsive websites using Flutter, Python, and Dart.
+   - Tech: Flutter, Python, Dart
+   - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+   - Links: [GitHub](https://github.com/umuthopeyildirim/appini)
+
+10. **CUBBA: Pothole Detection System**
+    - Category: IoT
+    - Description: CUBBA is a pothole detection system that uses Raspberry Pi and a camera to detect potholes. The system analyzes road defects and conditions and notifies the municipality when repairs are needed.
+    - Tech: Raspberry Pi, Python, OpenCV, TensorFlow, NumPy
+    - Team: Umut Hope YILDIRIM (GitHub: [Umut Hope YILDIRIM](https://github.com/umuthopeyildirim/))
+    - Links: [GitHub](https://github.com/umuthopeyildirim/cubba), [Website](https://cubba-website.pages.dev/)
+
+These are the projects along with their descriptions, technologies used, and relevant
