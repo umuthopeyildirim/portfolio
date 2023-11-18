@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
-import clsx from "clsx";
+import React, {useEffect, useRef, useState} from 'react';
+import {useLocation} from '@docusaurus/router';
+import clsx from 'clsx';
 
-import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faCalendar,
   faCode,
@@ -18,35 +18,35 @@ import {
   faMicrochip,
   faUsers,
   faMobile,
-  faFileContract
-} from "@fortawesome/free-solid-svg-icons";
-import { faChrome } from "@fortawesome/free-brands-svg-icons";
+  faFileContract,
+} from '@fortawesome/free-solid-svg-icons';
+import {faChrome} from '@fortawesome/free-brands-svg-icons';
 
-import styles from "./styles.module.css";
-import projects from "../../data/_Projects";
+import styles from './styles.module.css';
+import projects from '../../data/_Projects';
 
-function CategoryIcon({ category, size = "1x" }) {
+function CategoryIcon({category, size = '1x'}) {
   let faIcon;
   switch (category) {
-    case "Smart Contract":
+    case 'Smart Contract':
       faIcon = faFileContract;
       break;
-    case "Mobile":
+    case 'Mobile':
       faIcon = faMobile;
       break;
-    case "Project":
+    case 'Project':
       faIcon = faFile;
       break;
-    case "Open Source Tool":
+    case 'Open Source Tool':
       faIcon = faTools;
       break;
-    case "Website":
+    case 'Website':
       faIcon = faChrome;
       break;
-    case "Game":
+    case 'Game':
       faIcon = faGamepad;
       break;
-    case "IoT":
+    case 'IoT':
       faIcon = faMicrochip;
       break;
     default:
@@ -58,7 +58,7 @@ function CategoryIcon({ category, size = "1x" }) {
 
 function Projects() {
   const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+  const {siteConfig = {}} = context;
 
   const mainRef = useRef(null);
   const [showProjectItem, setShowProjectItem] = useState(false);
@@ -95,10 +95,10 @@ function Projects() {
         )}>
         <div className="container">
           <h1 className="hero__title">Projects</h1>
-          <p className="hero__subtitle">These are the projects I worked on...</p>
-          <div className={styles.buttons}>
-
-          </div>
+          <p className="hero__subtitle">
+            These are the projects I worked on...
+          </p>
+          <div className={styles.buttons}></div>
         </div>
       </header>
       <main ref={mainRef} hidden={true}>
@@ -106,14 +106,12 @@ function Projects() {
           <div className="container">
             <div
               className="row margin-bottom--lg"
-              style={{ display: showProjectItem ? "none" : "flex" }}
-            >
+              style={{display: showProjectItem ? 'none' : 'flex'}}>
               {projects.map((project) => (
                 <div
                   id={project.title}
-                  key={project.title + "-card"}
-                  className="col col--4 margin-bottom--lg"
-                >
+                  key={project.title + '-card'}
+                  className="col col--4 margin-bottom--lg">
                   <div className={styles.projectCard}>
                     {project.imageUrl ? (
                       <div className="card__image">
@@ -125,9 +123,10 @@ function Projects() {
                     ) : (
                       <div
                         className={
-                          project.bgColor == "alternate" ? "card__image alert--alert" : "card__image alert--success"
-                        }
-                      >
+                          project.bgColor == 'alternate'
+                            ? 'card__image alert--alert'
+                            : 'card__image alert--success'
+                        }>
                         <h2>{project.title}</h2>
                       </div>
                     )}
@@ -135,29 +134,28 @@ function Projects() {
                       <div className="avatar">
                         <div className="avatar__intro margin-left--none">
                           <h4 className="avatar__name">
-                            <CategoryIcon category={project.category} />{" "}
+                            <CategoryIcon category={project.category} />{' '}
                             {project.title}
                           </h4>
                           <p className="avatar__subtitle">{project.subtitle}</p>
                           <small className="avatar__subtitle">
-                            <FontAwesomeIcon alt="Code" icon={faCalendar} />{" "}
+                            <FontAwesomeIcon alt="Code" icon={faCalendar} />{' '}
                             {project.period}
                           </small>
                           <small className="avatar__subtitle">
-                            <FontAwesomeIcon alt="Code" icon={faCode} />{" "}
+                            <FontAwesomeIcon alt="Code" icon={faCode} />{' '}
                             {project.tech}
                           </small>
                         </div>
                       </div>
                     </div>
-                    <div className="card__footer" style={{ alignSelf: 'center' }}>
+                    <div className="card__footer" style={{alignSelf: 'center'}}>
                       <Link
                         className={clsx(
-                          "button button--outline button--primary",
-                          styles.buttons
+                          'button button--outline button--primary',
+                          styles.buttons,
                         )}
-                        to={useBaseUrl(project.slug)}
-                      >
+                        to={useBaseUrl(project.slug)}>
                         Learn more
                       </Link>
                     </div>
@@ -167,18 +165,16 @@ function Projects() {
             </div>
             <div
               className={clsx(
-                "text--center margin-bottom--xl",
-                styles.projectItem
+                'text--center margin-bottom--xl',
+                styles.projectItem,
               )}
-              style={{ display: showProjectItem ? "block" : "none" }}
-            >
+              style={{display: showProjectItem ? 'block' : 'none'}}>
               <Link
                 className={clsx(
-                  "button button--outline button--primary",
-                  styles.projectItemBackButton
+                  'button button--outline button--primary',
+                  styles.projectItemBackButton,
                 )}
-                to={useBaseUrl("/projects")}
-              >
+                to={useBaseUrl('/projects')}>
                 All projects
               </Link>
               <h1>{projectItem.title}</h1>
@@ -192,27 +188,27 @@ function Projects() {
               <div>
                 <ul>
                   <li>
-                    <CategoryIcon category={projectItem.category} />{" "}
+                    <CategoryIcon category={projectItem.category} />{' '}
                     {projectItem.category}
                   </li>
                   <li>
-                    <FontAwesomeIcon alt="Calendar" icon={faCalendar} />{" "}
+                    <FontAwesomeIcon alt="Calendar" icon={faCalendar} />{' '}
                     {projectItem.period}
                   </li>
                   <li>
-                    <FontAwesomeIcon alt="Code" icon={faCode} />{" "}
+                    <FontAwesomeIcon alt="Code" icon={faCode} />{' '}
                     {projectItem.tech}
                   </li>
                   {projectItem.team && (
                     <li>
-                      <FontAwesomeIcon alt="Team" icon={faUsers} />{" "}
+                      <FontAwesomeIcon alt="Team" icon={faUsers} />{' '}
                       {projectItem.team.map((member, i) => (
                         <span key={i}>
                           {member.link && (
                             <a href={member.link}>{member.name}</a>
                           )}
                           {!member.link && member.name}
-                          {i < projectItem.team.length - 1 ? ", " : ""}
+                          {i < projectItem.team.length - 1 ? ', ' : ''}
                         </span>
                       ))}
                     </li>
@@ -227,7 +223,7 @@ function Projects() {
                       {projectItem.links.map((link, i) => (
                         <li key={i}>
                           <a target="_blank" href={link.link}>
-                            <FontAwesomeIcon alt="Link" icon={faLink} />{" "}
+                            <FontAwesomeIcon alt="Link" icon={faLink} />{' '}
                             {link.name}
                           </a>
                         </li>
@@ -238,11 +234,10 @@ function Projects() {
               </div>
               <Link
                 className={clsx(
-                  "button button--outline button--primary",
-                  styles.projectItemBackButton
+                  'button button--outline button--primary',
+                  styles.projectItemBackButton,
                 )}
-                to={useBaseUrl("/projects")}
-              >
+                to={useBaseUrl('/projects')}>
                 All projects
               </Link>
             </div>
@@ -253,7 +248,7 @@ function Projects() {
             <h3>Continue exploring?</h3>
             <nav className="pagination-nav">
               <div className="pagination-nav__item">
-                <Link className="pagination-nav__link" to={useBaseUrl("blog/")}>
+                <Link className="pagination-nav__link" to={useBaseUrl('blog/')}>
                   <div className="pagination-nav__sublabel">Read</div>
                   <div className="pagination-nav__label">My Blog</div>
                 </Link>
@@ -261,8 +256,7 @@ function Projects() {
               <div className="pagination-nav__item pagination-nav__item--next">
                 <Link
                   className="pagination-nav__link"
-                  href={useBaseUrl("about/")}
-                >
+                  href={useBaseUrl('about/')}>
                   <div className="pagination-nav__sublabel">Learn more</div>
                   <div className="pagination-nav__label">About me</div>
                 </Link>
