@@ -145,7 +145,7 @@ const projects = [
         </p>
         <p>
           Software Engineering, Data Science, and Data Structures & Algorithms
-          are curently available. Product Design and Cybersecurity will be
+          are currently available. Product Design and Cybersecurity will be
           released in the near future.
         </p>
         <h4>Deployment & Usage</h4>
