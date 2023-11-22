@@ -36,7 +36,7 @@ const projects = [
         <ul>
           <li>
             <b>Fast and Efficient</b>: Designed with speed and efficiency at its
-            core. Quivr ensures rapid access to your data.
+            core. MarkAI ensures rapid access to your data
           </li>
           <li>
             <b>Secure</b>: Your data, your control. Always.
