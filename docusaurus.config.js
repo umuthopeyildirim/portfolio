@@ -10,8 +10,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 /** @type {import('@docusaurus/types').Config} */
-require('dotenv').config()
-
+require('dotenv').config();
 
 const config = {
   title: 'Umut Hope YILDIRIM',
@@ -36,23 +35,21 @@ const config = {
     appId: process.env.FIREBASE_APPID,
     measurementId: process.env.FIREBASE_MEASUREMENTID,
     cloudMessagingVapidKey: process.env.FIREBASE_CLOUDMESSAGINGVAPIDKEY,
-    reCaptchaV3SiteKey: process.env.RECAPTCHA_V3_SITEKEY
+    reCaptchaV3SiteKey: process.env.RECAPTCHA_V3_SITEKEY,
   },
   scripts: [
     {
       async: true,
-      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6517221663935477",
-      crossorigin: "anonymous",
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6517221663935477',
+      crossorigin: 'anonymous',
     },
     {
-      src: "https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js",
+      src: 'https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js',
       async: true,
-      customElement: "amp-auto-ads",
-    }
+      customElement: 'amp-auto-ads',
+    },
   ],
-  clientModules: [
-    require.resolve('./src/theme/voiceflow.js'),
-  ],
+  clientModules: [require.resolve('./src/theme/voiceflow.js')],
   plugins: [
     [
       '@docusaurus/plugin-pwa',
@@ -96,7 +93,7 @@ const config = {
       },
     ],
     [
-      "docusaurus2-dotenv",
+      'docusaurus2-dotenv',
       {
         systemvars: true,
       },
@@ -111,15 +108,28 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/umuthopeyildirim/portfolio/blob/main/',
+          editUrl: 'https://github.com/umuthopeyildirim/portfolio/blob/main/',
         },
         blog: {
           showReadingTime: true,
+          feedOptions: {
+            type: 'all',
+            title: "Hope's Blog",
+            description: "Hope's Blog",
+            copyright: `Copyright © ${new Date().getFullYear()} Umut YILDIRIM.`,
+            language: 'en',
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              return defaultCreateFeedItems({
+                // keep only the 10 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 10),
+                ...rest,
+              });
+            },
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/umuthopeyildirim/portfolio/blob/main/',
+          editUrl: 'https://github.com/umuthopeyildirim/portfolio/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -138,185 +148,185 @@ const config = {
     ],
   ],
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-  themeConfig:
-    ({
-      image: 'img/umutyildirim.png',
-      colorMode: {
-        defaultMode: 'dark',
-        respectPrefersColorScheme: true,
+  themeConfig: {
+    image: 'img/umutyildirim.png',
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+    },
+    algolia: {
+      appId: 'O1HCJIY1QA',
+      apiKey: 'dce316bfcba2fc8ad1620201a57b953f',
+      indexName: 'umutyildirim',
+      contextualSearch: true,
+    },
+    metadata: [
+      {
+        name: 'keywords',
+        content:
+          'Umut YILDIRIM, Umut Hope YILDIRIM, Umut, Hope, Yildirim, Portfolio, Blog, Gists, Tutorials, Projects, About',
       },
-      algolia: {
-        appId: 'O1HCJIY1QA',
-        apiKey: 'dce316bfcba2fc8ad1620201a57b953f',
-        indexName: 'umutyildirim',
-        contextualSearch: true,
+      {
+        name: 'description',
+        content: "Umut YILDIRIM's Portfolio Website",
       },
-      metadata: [
+      {
+        name: 'docsearch:language_tag',
+        content: 'en',
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary',
+      },
+      {
+        name: 'twitter:site',
+        content: '@umuthopeyildirim',
+      },
+      {
+        name: 'twitter:creator',
+        content: '@umuthopeyildirim',
+      },
+      {
+        name: 'twitter:title',
+        content: "Hope's Portfolio",
+      },
+      {
+        name: 'twitter:description',
+        content: "Umut YILDIRIM's Portfolio Website",
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://umutyildirim.com/img/umutyildirim.png',
+      },
+    ],
+    navbar: {
+      logo: {
+        alt: 'Umut YILDIRIM Logo',
+        src: `/img/logo-light.png`,
+        srcDark: `/img/logo-dark.png`,
+        href: '/',
+        target: '_self',
+      },
+      items: [
         {
-          name: 'keywords',
-          content: 'Umut YILDIRIM, Umut Hope YILDIRIM, Umut, Hope, Yildirim, Portfolio, Blog, Gists, Tutorials, Projects, About'
+          to: 'blog',
+          label: 'Blogs',
+          position: 'left',
         },
         {
-          name: 'description',
-          content: 'Umut YILDIRIM\'s Portfolio Website'
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: 'Docs',
         },
         {
-          name: 'docsearch:language_tag',
-          content: 'en'
+          to: 'projects',
+          label: 'Projects',
+          position: 'left',
         },
         {
-          name: 'twitter:card',
-          content: 'summary'
+          to: 'contact',
+          label: 'Contact',
+          position: 'left',
+        },
+        // Please keep GitHub link to the right for consistency.
+        {
+          href: 'https://github.com/umuthopeyildirim/',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
         {
-          name: 'twitter:site',
-          content: '@umuthopeyildirim'
-        },
-        {
-          name: 'twitter:creator',
-          content: '@umuthopeyildirim'
-        },
-        {
-          name: 'twitter:title',
-          content: "Hope's Portfolio"
-        },
-        {
-          name: 'twitter:description',
-          content: 'Umut YILDIRIM\'s Portfolio Website'
-        },
-        {
-          name: 'twitter:image',
-          content: 'https://umutyildirim.com/img/umutyildirim.png'
+          href: 'https://garden.umutyildirim.com/',
+          position: 'right',
+          className: 'header-obsidian-link',
+          'aria-label': 'Digital Garden Link',
         },
       ],
-      navbar: {
-        logo: {
-          alt: 'Umut YILDIRIM Logo',
-          src: `/img/logo-light.png`,
-          srcDark: `/img/logo-dark.png`,
-          href: '/',
-          target: '_self',
+    },
+    footer: {
+      style: 'light',
+      links: [
+        {
+          title: 'Support me',
+          items: [
+            {
+              html: '<a href="https://www.producthunt.com/posts/hope-s-portfolio?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hope&#0045;s&#0045;portfolio" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=368405&theme=light" alt="Hope&#0039;s&#0032;Portfolio - My&#0032;own&#0032;personal&#0032;portfolio&#0044;&#0032;created&#0032;using&#0032;Docusaurus&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>',
+            },
+            // I need to add my Stipe account to BuyMeACoffee. But I'm not US citizen so I can't do it.
+            // {
+            //   html: '<a target="_blank" href="https://www.buymeacoffee.com/hope"><img alt="BuyMeCoffee Button" src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=hope&button_colour=215fc5&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>',
+            // },
+            {
+              html: '<a href="https://twitter.com/hopesweaty?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @HopeSweaty</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
+            },
+          ],
         },
-        items: [
-          {
-            to: 'blog',
-            label: 'Blogs',
-            position: 'left'
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Docs',
-          },
-          {
-            to: 'projects',
-            label: 'Projects',
-            position: 'left',
-          },
-          {
-            to: 'contact',
-            label: 'Contact',
-            position: 'left'
-          },
-          // Please keep GitHub link to the right for consistency.
-          {
-            href: 'https://github.com/umuthopeyildirim/',
-            position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
-          },
-          {
-            href: 'https://garden.umutyildirim.com/',
-            position: 'right',
-            className: 'header-obsidian-link',
-            'aria-label': 'Digital Garden Link',
-          },
-        ],
-      },
-      footer: {
-        style: 'light',
-        links: [
-          {
-            title: 'Support me',
-            items: [
-              {
-                html: '<a href="https://www.producthunt.com/posts/hope-s-portfolio?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hope&#0045;s&#0045;portfolio" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=368405&theme=light" alt="Hope&#0039;s&#0032;Portfolio - My&#0032;own&#0032;personal&#0032;portfolio&#0044;&#0032;created&#0032;using&#0032;Docusaurus&#0033; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>',
-              },
-              // I need to add my Stipe account to BuyMeACoffee. But I'm not US citizen so I can't do it.
-              // {
-              //   html: '<a target="_blank" href="https://www.buymeacoffee.com/hope"><img alt="BuyMeCoffee Button" src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=hope&button_colour=215fc5&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>',
-              // },
-              {
-                html: '<a href="https://twitter.com/hopesweaty?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @HopeSweaty</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>',
-              },
-            ],
-          },
-          {
-            title: 'Discover',
-            items: [
-              {
-                label: 'Blog',
-                to: 'blog',
-              },
-              {
-                label: 'Docs',
-                to: 'docs/intro',
-              },
-              {
-                label: 'Projects',
-                to: 'projects',
-              },
-            ],
-          },
-          {
-            title: 'Get To Know Me',
-            items: [
-              {
-                label: 'My Resume',
-                href: 'resume',
-              },
-              {
-                label: 'Privacy Policy',
-                href: 'privacy',
-              },
-              {
-                label: 'Contact Me',
-                to: 'contact',
-              }
-            ],
-          },
-          {
-            title: 'Social Media',
-            items: [
-              {
-                label: 'Digital Garden',
-                href: 'https://garden.umutyildirim.com/',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/umuthopeyildirim',
-              },
-              {
-                label: 'LinkedIn',
-                href: 'https://www.linkedin.com/in/umuthopeyildirim/',
-              },
-              {
-                label: 'Instagram',
-                href: 'https://www.instagram.com/umuthopeyildirim/',
-              },
-              {
-                label: 'mstodon.eu',
-                rel: 'me',
-                href: 'https://mstodon.eu/@hope',
-              },
-            ],
-          },
-        ],
-        // Please do not remove the credits, help to publicize Docusaurus :)
-        copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with <a href="https://docusaurus.io" target="_blank">Docusaurus🦖</a>`,
-      },
-    }),
+        {
+          title: 'Discover',
+          items: [
+            {
+              label: 'Blog',
+              to: 'blog',
+            },
+            {
+              label: 'Docs',
+              to: 'docs/intro',
+            },
+            {
+              label: 'Projects',
+              to: 'projects',
+            },
+          ],
+        },
+        {
+          title: 'Get To Know Me',
+          items: [
+            {
+              label: 'My Resume',
+              href: 'resume',
+            },
+            {
+              label: 'Privacy Policy',
+              href: 'privacy',
+            },
+            {
+              label: 'Contact Me',
+              to: 'contact',
+            },
+          ],
+        },
+        {
+          title: 'Social Media',
+          items: [
+            {
+              label: 'Digital Garden',
+              href: 'https://garden.umutyildirim.com/',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/umuthopeyildirim',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/umuthopeyildirim/',
+            },
+            {
+              label: 'Instagram',
+              href: 'https://www.instagram.com/umuthopeyildirim/',
+            },
+            {
+              label: 'mstodon.eu',
+              rel: 'me',
+              href: 'https://mstodon.eu/@hope',
+            },
+          ],
+        },
+      ],
+      // Please do not remove the credits, help to publicize Docusaurus :)
+      copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with <a href="https://docusaurus.io" target="_blank">Docusaurus🦖</a>`,
+    },
+  },
 };
 
 module.exports = config;
