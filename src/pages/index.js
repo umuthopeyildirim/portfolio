@@ -13,17 +13,22 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
-import Hero from "../components/Hero";
+import Hero from '../components/Hero';
 
 function Server(props) {
-	return (
-		<div className={styles.icon__wrapper}>
+  return (
+    <div className={styles.icon__wrapper}>
       <a href="/projects">
-        <img src={props.src} alt={props.name} title={props.name} className={styles.icon}/>
-        { props.partner && <Partner/> }
+        <img
+          src={props.src}
+          alt={props.name}
+          title={props.name}
+          className={styles.icon}
+        />
+        {props.partner && <Partner />}
       </a>
-		</div>
-	)
+    </div>
+  );
 }
 
 export default function Home() {
@@ -37,6 +42,7 @@ export default function Home() {
       <section className={styles.servers_wrapper}>
         <h2>Projects</h2>
         <div className={styles.servers}>
+          <Server name="MarkAI" src="img/projects_logo/markai.png" />
           <Server
             name="Mirage Vision Renderer"
             src="img/projects_logo/mirage-vision-renderer.png"
@@ -57,10 +63,7 @@ export default function Home() {
             name="MyPassManager"
             src="img/projects_logo/mypassmanager-logo192.png"
           />
-          <Server 
-            name="BoardiBoard"
-            src="img/projects_logo/boardiboard.svg"
-          />
+          <Server name="BoardiBoard" src="img/projects_logo/boardiboard.svg" />
         </div>
       </section>
       <main id="about">
@@ -125,8 +128,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.features}>
-        </section>
+        <section className={styles.features}></section>
       </main>
     </Layout>
   );

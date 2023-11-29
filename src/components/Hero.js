@@ -15,9 +15,12 @@ export default function Hero() {
               <br />
             </h1>
             <p>
-              I am a junior software developer passionate about productionizing
-              AI. I enjoy transforming AI tools and research into practical,
-              scalable software solutions.
+              As a junior software developer, I am passionate about turning AI
+              tools and research into practical, scalable software solutions. My
+              focus is on implementing AI technologies efficiently and
+              effectively, ensuring they serve real-world applications. My goal
+              is to make advanced AI accessible and useful in various
+              industries.
             </p>
             <Link
               className={clsx(
