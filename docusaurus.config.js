@@ -49,7 +49,10 @@ const config = {
       customElement: 'amp-auto-ads',
     },
   ],
-  clientModules: [require.resolve('./src/theme/voiceflow.js')],
+  clientModules: [
+    require.resolve('./src/theme/voiceflow.js'),
+    require.resolve('./src/theme/posthog.js'),
+  ],
   plugins: [
     [
       '@docusaurus/plugin-pwa',
