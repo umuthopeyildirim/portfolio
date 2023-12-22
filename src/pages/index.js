@@ -42,6 +42,7 @@ export default function Home() {
       <section className={styles.servers_wrapper}>
         <h2>Projects</h2>
         <div className={styles.servers}>
+          <Server name="Helicone" src="img/projects_logo/helicone.webp" />
           <Server name="MarkAI" src="img/projects_logo/markai.png" />
           <Server
             name="Mirage Vision Renderer"

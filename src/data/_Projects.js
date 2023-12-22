@@ -5,6 +5,91 @@ import React from 'react';
 const projects = [
   {
     category: 'Website',
+    title: 'Helicone',
+    slug: '#helicone',
+    imageUrl: 'img/projects/helicone.jpeg',
+    subtitle: 'The easiest way to monitor your LLM-applications at scale.',
+    period: '24 Nov 2023',
+    tech: 'NextJS, Cloudflare, OpenAI, Tailwindcss, Vercel, Supabase, Clickhouse, TypeScript, PostgreSQL, KV, Cache',
+    team: [
+      {
+        name: 'Umut Hope YILDIRIM',
+        link: 'https://github.com/umuthopeyildirim/',
+      },
+    ],
+    description: (
+      <>
+        <p>
+          As a collaborative member of the Helicone Team, I contributed to the
+          development of a robust platform designed for monitoring Large
+          Language Models (LLMs) at scale. This innovative platform streamlines
+          the process of managing and analyzing LLMs, enhancing efficiency and
+          scalability. My role encompassed both technical development and
+          project optimization, ensuring a seamless user experience and
+          effective system performance.
+        </p>
+        <h4>Helicone Technical Contributions: 🎯</h4>
+        <ul style={{listStyleType: 'disc'}}>
+          <li>
+            Revamped documentation and fixed TypeScript configurations for
+            Langchain and other projects.
+          </li>
+          <li>
+            Removed and replaced `recharts` with alternatives in Tremor,
+            entailing deletion and repurposing of multiple components.
+          </li>
+          <li>
+            Developed and integrated a new `cache_hits` table in Clickhouse,
+            enhancing the `recordCacheHit` function for improved data
+            management.
+          </li>
+          <li>
+            Eliminated unnecessary dependencies like `@dqbd/tiktoken` and
+            updated API calls by substituting `axios` with `fetch`.
+          </li>
+          <li>
+            Implemented code quality improvements by resolving eslint
+            unused-imports errors and removing redundant imports.
+          </li>
+          <li>
+            Enhanced user experience by adding redirect options for Google and
+            GitHub sign-in and supporting GitHub authentication.
+          </li>
+          <li>
+            Contributed to user interface enhancements, including the addition
+            of a user cost graph.
+          </li>
+        </ul>
+        <h4>Helicone Project Management and Optimization:</h4>
+        <ul style={{listStyleType: 'disc'}}>
+          <li>
+            Managed testing requirements for UI/UX improvements, particularly
+            for the Cache page.
+          </li>
+          <li>
+            Streamlined onboarding processes by modifying email templates and
+            onboarding checks, and setting existing users to 'has_onboarded'.
+          </li>
+          <li>
+            Ensured thorough testing, including end-to-end testing of GitHub
+            authentication integration.
+          </li>
+        </ul>
+      </>
+    ),
+    links: [
+      {
+        name: 'Website',
+        link: 'https://helicone.ai',
+      },
+      {
+        name: 'Github',
+        link: 'https://github.com/helicone/helicone',
+      },
+    ],
+  },
+  {
+    category: 'Website',
     title: 'MarkAI',
     slug: '#markai',
     imageUrl: 'img/projects/markai.png',
