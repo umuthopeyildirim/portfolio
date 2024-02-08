@@ -19,6 +19,7 @@ import {
   faUsers,
   faMobile,
   faFileContract,
+  faBrain,
 } from '@fortawesome/free-solid-svg-icons';
 import {faChrome} from '@fortawesome/free-brands-svg-icons';
 
@@ -48,6 +49,9 @@ function CategoryIcon({category, size = '1x'}) {
       break;
     case 'IoT':
       faIcon = faMicrochip;
+      break;
+    case 'AI':
+      faIcon = faBrain;
       break;
     default:
       faIcon = faFile;

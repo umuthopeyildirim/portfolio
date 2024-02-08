@@ -4,6 +4,48 @@ import React from 'react';
 
 const projects = [
   {
+    category: 'AI',
+    title: 'Fin-RWKV',
+    slug: '#fin-rwkv',
+    imageUrl: 'img/projects/finrwkv.png',
+    subtitle: 'Attention-Free LLM For Scalable Financial Analysis',
+    period: '08 Feb 2024',
+    tech: 'RWKV, Fine-Tuning, Finance, LLM, Linear Transformers', 
+    team: [
+      {
+        name: 'Umut Hope YILDIRIM',
+        link: 'https://github.com/umuthopeyildirim/',
+      },
+    ],
+    description: (
+      <>
+        <p>
+        The problem? Transformers Attention are reaching their limits.
+        Competing on training with GPT-4 or BloombergGPT for finance is just unfeasible for 
+        startups or individuals, since costs are in the magnitude of millions.
+        Fin-RWKV is a fine-tuned version of RWKV that was fine-tuned on the finance-alpaca dataset 
+        for a few dollars in a few hours. This can be used to answer user prompts along with real-time 
+        data aggregated by MindsDB, like OpenBB, vector DBs, or internal datasets.
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MQI2CJ9kn-E?si=acdi7bkF3EKgkz-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </>
+    ),
+    links: [
+      {
+        name: 'HuggingFace ',
+        link: 'https://huggingface.co/collections/umuthopeyildirim/fin-rwkv-v1-65b670fd16301f4030f4359a',
+      },
+      {
+        name: 'Demo',
+        link: 'https://huggingface.co/spaces/umuthopeyildirim/fin-rwkv-1b5',
+      },
+      {
+        name: 'Slides',
+        link: 'https://docs.google.com/presentation/d/1vNQ8Y5wwR0WXlO60fsXjkru5R9I0ZgykTmgag0B3Ato/edit?usp=sharing',
+      }
+    ],
+  },
+  {
     category: 'Website',
     title: 'Helicone',
     slug: '#helicone',
