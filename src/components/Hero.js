@@ -15,11 +15,13 @@ export default function Hero() {
               <br />
             </h1>
             <p>
-              As a junior software developer, I am passionate about turning AI
-              tools and research into practical, scalable software solutions. My
-              focus is on implementing AI technologies efficiently and
-              effectively, ensuring they serve real-world applications. My goal
-              is to make advanced AI accessible and useful in various
+              As an ML engineer, I specialize in transforming cutting-edge AI
+              research into robust, production-ready systems. My expertise lies
+              in optimizing model performance, implementing efficient MLOps
+              pipelines, and leveraging cloud infrastructure to scale AI
+              solutions. I'm passionate about bridging the gap between academic
+              AI advancements and real-world applications, making powerful
+              machine learning models accessible and impactful across various
               industries.
             </p>
             <Link

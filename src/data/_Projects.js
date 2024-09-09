@@ -5,12 +5,62 @@ import React from 'react';
 const projects = [
   {
     category: 'AI',
+    title: 'Experimentation in Content Moderation using RWKV',
+    slug: '#content-moderation-rwkv',
+    imageUrl: 'img/projects/content-moderation.png',
+    subtitle: 'Exploring RWKV for Efficient Content Moderation',
+    period: '05 Sept 2024',
+    tech: 'RWKV, Content Moderation, AI, LLM, NLP, Datasets',
+    team: [
+      {
+        name: 'Umut Hope YILDIRIM',
+        link: 'https://github.com/umuthopeyildirim/',
+      },
+      {
+        name: 'Rohan Dutta',
+        link: 'https://github.com/rohan-dutta-123',
+      },
+    ],
+    description: (
+      <>
+        <p>
+          This paper investigates the RWKV model's efficacy in content
+          moderation through targeted experimentation. We introduce a novel
+          dataset specifically designed for distillation into smaller models,
+          enhancing content moderation practices. This comprehensive dataset
+          encompasses images, videos, sounds, and text data that present
+          societal challenges. Leveraging advanced Large Language Models (LLMs),
+          we generated an extensive set of responses -- 558,958 for text and
+          83,625 for images -- to train and refine content moderation systems.
+          Our core experimentation involved fine-tuning the RWKV model,
+          capitalizing on its CPU-efficient architecture to address large-scale
+          content moderation tasks. By highlighting the dataset's potential for
+          knowledge distillation, this study not only demonstrates RWKV's
+          capability in improving the accuracy and efficiency of content
+          moderation systems but also paves the way for developing more compact,
+          resource-efficient models in this domain.
+        </p>
+      </>
+    ),
+    links: [
+      {
+        name: 'HuggingFace',
+        link: 'https://huggingface.co/modrwkv',
+      },
+      {
+        name: 'Paper',
+        link: 'https://arxiv.org/abs/2409.03939',
+      },
+    ],
+  },
+  {
+    category: 'AI',
     title: 'Fin-RWKV',
     slug: '#fin-rwkv',
     imageUrl: 'img/projects/finrwkv.png',
     subtitle: 'Attention-Free LLM For Scalable Financial Analysis',
     period: '08 Feb 2024',
-    tech: 'RWKV, Fine-Tuning, Finance, LLM, Linear Transformers', 
+    tech: 'RWKV, Fine-Tuning, Finance, LLM, Linear Transformers',
     team: [
       {
         name: 'Umut Hope YILDIRIM',
@@ -20,14 +70,23 @@ const projects = [
     description: (
       <>
         <p>
-        The problem? Transformers Attention are reaching their limits.
-        Competing on training with GPT-4 or BloombergGPT for finance is just unfeasible for 
-        startups or individuals, since costs are in the magnitude of millions.
-        Fin-RWKV is a fine-tuned version of RWKV that was fine-tuned on the finance-alpaca dataset 
-        for a few dollars in a few hours. This can be used to answer user prompts along with real-time 
-        data aggregated by MindsDB, like OpenBB, vector DBs, or internal datasets.
+          The problem? Transformers Attention are reaching their limits.
+          Competing on training with GPT-4 or BloombergGPT for finance is just
+          unfeasible for startups or individuals, since costs are in the
+          magnitude of millions. Fin-RWKV is a fine-tuned version of RWKV that
+          was fine-tuned on the finance-alpaca dataset for a few dollars in a
+          few hours. This can be used to answer user prompts along with
+          real-time data aggregated by MindsDB, like OpenBB, vector DBs, or
+          internal datasets.
         </p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MQI2CJ9kn-E?si=acdi7bkF3EKgkz-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/MQI2CJ9kn-E?si=acdi7bkF3EKgkz-w"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </>
     ),
     links: [
@@ -42,7 +101,7 @@ const projects = [
       {
         name: 'Slides',
         link: 'https://docs.google.com/presentation/d/1vNQ8Y5wwR0WXlO60fsXjkru5R9I0ZgykTmgag0B3Ato/edit?usp=sharing',
-      }
+      },
     ],
   },
   {

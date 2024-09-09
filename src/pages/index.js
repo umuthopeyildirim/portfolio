@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <Layout
       title={`Home`}
-      description="I like full-stack development. Also, I am interested in the cloud, computer vision and artificial intelligence.">
+      description="ML engineer specializing in deploying and scaling AI models for production environments. Passionate about MLOps, cloud infrastructure, and optimizing model performance.">
       <Hero />
       <section className={styles.servers_wrapper}>
         <h2>Projects</h2>
@@ -119,12 +119,9 @@ export default function Home() {
                   of its Computer Science program.
                 </p>
                 <p>
-                  ☁️ I am passionate about cloud-native technologies and open
-                  source software. <br />
-                  🔥 I am a huge fan of Google Cloud Platform and Firebase.
-                  <br />
-                  At the moment, I am working on a Firebase and Cloudflare
-                  project that I am very excited about.
+                  🥇 I&apos;m currently working as a Machine Learning Engineer
+                  at <a href="https://medal.tv">Medal.TV</a>&apos;s{' '}
+                  <a href="https://highlight.ing">Highlight</a> project.
                 </p>
               </div>
             </div>
