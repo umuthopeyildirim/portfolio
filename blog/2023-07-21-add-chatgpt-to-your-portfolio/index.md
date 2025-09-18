@@ -8,6 +8,8 @@ tags: [OpenAI, ChatGPT, Docusaurus, JavaScript, Voiceflow, Chatbot]
 
 ChatGPT and similar large language models (LLMs) are currently at the forefront of every developer's mind, emerging as the latest trend in 'Silicon Valley'. The hype is real, and the possibilities are endless. But how do you get started? In this article, I will show you how to create a simple chatbot using ChatGPT and Voiceflow. I will also show you how to add it to your portfolio using Docusaurus.
 
+<!-- truncate -->
+
 ## Let's understand the basics first
 
 Before delving into the creation of a ChatGPT-based chatbot, it's essential to grasp the fundamental principles underlying ChatGPT. Developed by OpenAI, ChatGPT stands as a prominent example of a large language model (LLM), distinguished by its proficiency in producing text that closely resembles human writing. This capability stems from its design as a transformer model, a type of architecture that has significantly advanced the field of natural language processing (NLP).

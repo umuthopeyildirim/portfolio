@@ -6,10 +6,6 @@
  *
  * @format
  */
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-/** @type {import('@docusaurus/types').Config} */
 require('dotenv').config();
 
 const config = {
@@ -25,6 +21,10 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'umuthopeyildirim', // Usually your GitHub org/user name.
   projectName: 'portfolio', // Usually your repo name.
+
+  future: {
+    v4: true,
+  },
 
   customFields: {
     apiKey: process.env.FIREBASE_APIKEY,
@@ -79,14 +79,6 @@ const config = {
             content: 'rgb(37, 194, 160)',
           },
         ],
-      },
-    ],
-    [
-      'docusaurus-plugin-content-gists',
-      {
-        enabled: true,
-        verbose: false,
-        personalAccessToken: process.env.GH_PERSONAL_ACCESS_TOKEN,
       },
     ],
     [
@@ -216,12 +208,12 @@ const config = {
           label: 'Blogs',
           position: 'left',
         },
-        {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: 'Docs',
-        },
+        // {
+        //   type: 'doc',
+        //   docId: 'intro',
+        //   position: 'left',
+        //   label: 'Docs',
+        // },
         {
           to: 'projects',
           label: 'Projects',
@@ -272,10 +264,10 @@ const config = {
               label: 'Blog',
               to: 'blog',
             },
-            {
-              label: 'Docs',
-              to: 'docs/intro',
-            },
+            // {
+            //   label: 'Docs',
+            //   to: 'docs/intro',
+            // },
             {
               label: 'Projects',
               to: 'projects',
@@ -287,11 +279,11 @@ const config = {
           items: [
             {
               label: 'My Resume',
-              href: 'resume',
+              to: 'resume',
             },
             {
               label: 'Privacy Policy',
-              href: 'privacy',
+              to: 'privacy',
             },
             {
               label: 'Contact Me',

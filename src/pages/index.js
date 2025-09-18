@@ -68,10 +68,9 @@ export default function Home() {
           <Server name="BoardiBoard" src="img/projects_logo/boardiboard.svg" />
         </div>
       </section>
-      <main id="about">
-        <section className={styles.features}>
-          <div className="container">
-            <div className={styles.about}>
+      <section id="about" className={styles.features}>
+        <div className="container">
+          <div className={styles.about}>
               <div>
                 <img
                   className={styles.aboutProfilePic}
@@ -124,11 +123,10 @@ export default function Home() {
                   <a href="https://highlight.ing">Highlight</a> project.
                 </p>
               </div>
-            </div>
           </div>
-        </section>
-        <section className={styles.features}></section>
-      </main>
+        </div>
+      </section>
+      <section className={styles.features}></section>
     </Layout>
   );
 }

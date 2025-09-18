@@ -7,17 +7,21 @@ tags: [Firebase, Auth, React, JavaScript]
 
 ![Header Image](./images/user-authentication-firebase-react.jpeg)
 
-Nowadays, security is very important on websites and apps. That’s mainly to ensure that private data is not leaked to the public and someone doesn’t do actions on your behalf.
+Nowadays, security is very important on websites and apps. That's mainly to ensure that private data is not leaked to the public and someone doesn't do actions on your behalf.
 
 Today, we are going to use Firebase, which is a BaaS that helps us with various services such as database authentication and cloud storage. We are going to see how we can use the authentication service in Firebase to secure our React app.
 
+<!-- truncate -->
+
 ## Requirements for authenticating with Firebase in React
+
 - Node.js installed
 - Code editor — I prefer Visual Studio Code
 - Google account — we need this to use Firebase
 - Basic knowledge of React — I won’t recommend this tutorial for complete beginners in React
 
 # Setting up Firebase
+
 Before we dive into React and start coding some good stuff, we need to set up our own Firebase project through the ![Firebase Console](https://console.firebase.google.com/u/0/). To get started, navigate your browser to Firebase Console. Make sure you are logged into your Google account.
 
 Now, click on Add project and you should be presented with the following screen:
@@ -26,63 +30,59 @@ Once you’ve given it a sweet name, click on **Continue** and you should be pro
 
 Once you’ve completed all the steps, you should be presented with the dashboard, which looks something like this:
 
-![Firebase Project Created](./images/react-firebase-console-dashboard.png)
-First, let’s set up authentication. Click on **Authentication** on the sidebar and click on **Get Started** to enable the module. Now you will be presented with various authentication options:
+![Firebase Project Created](./images/react-firebase-console-dashboard.png) First, let’s set up authentication. Click on **Authentication** on the sidebar and click on **Get Started** to enable the module. Now you will be presented with various authentication options:
 
-![Firebase Auth Page](./images/authentication-page-firebase.png)
-First click on **Email/Password**, enable it, and save it:
+![Firebase Auth Page](./images/authentication-page-firebase.png) First click on **Email/Password**, enable it, and save it:
 
-![Email Password Options Firebase](./images/email-password-options-firebase.png)
-Now press on **Google**:
+![Email Password Options Firebase](./images/email-password-options-firebase.png) Now press on **Google**:
 
-![Google Options Firebase](./images/google-options-firebase-console.png)
-Press enable, select a project support email address, and click on **Save** to activate Google Authentication for our app.
+![Google Options Firebase](./images/google-options-firebase-console.png) Press enable, select a project support email address, and click on **Save** to activate Google Authentication for our app.
 
 Now, let’s set up the database we are going to use for our project, which is Cloud Firestore. Click on **Cloud Firestore** on the sidebar and click on **Create Database**. You should be presented with the following dialog:
 
-![Cloud Firestore Create Database](./images/cloud-firestore-create-database.png)
-Remember to select **Start in test mode**. We are using test mode because we are not dealing with production-level applications in this tutorial. Production mode databases require a configuration of security rules, which is out of the scope of this tutorial.
+![Cloud Firestore Create Database](./images/cloud-firestore-create-database.png) Remember to select **Start in test mode**. We are using test mode because we are not dealing with production-level applications in this tutorial. Production mode databases require a configuration of security rules, which is out of the scope of this tutorial.
 
 Click Next. Select the region. I’ll leave it to the default, and then press **Enable**. This should completely set up your Cloud Firestore database.
 
 ## Creating and setting up a React app
+
 Navigate to a safe folder and type the following command in the terminal to create a new React app:
+
 ```bash
 npx create-react-app appname
 ```
 
 Remember to replace `appname` with a name of your choice. The name doesn’t really affect how the tutorial works. Once the React app is successfully created, type the command to install a few npm packages we will need throughout the project:
+
 ```bash
 npm install firebase react-router-dom react-firebase-hooks
 ```
+
 Here, we are installing `firebase` to communicate with Firebase services, and we are also installing `react-router-dom` to handle the routing of the application. We use `react-firebase-hooks` to manage the authentication state of the user.
 
 Type the following command to run your React app:
+
 ```bash
 cd appname && npm start
 ```
-This should fire up your browser and you should see the following screen:
-![React App Beginning Setup Firebase](./images/react-app-beginning-setup-firebase.png)
-Now, let’s do some cleanup so that we can continue with coding. Delete the following files from the `src` folder: `App.test.js`, `logo.svg`, and `setupTests.js`. Once you delete these files, delete all the contents of `App.css` and you will see an error on the React app. Don’t worry; just remove the logo imports in `App.js` and empty the div so that your `App.js` looks like this:
+
+This should fire up your browser and you should see the following screen: ![React App Beginning Setup Firebase](./images/react-app-beginning-setup-firebase.png) Now, let’s do some cleanup so that we can continue with coding. Delete the following files from the `src` folder: `App.test.js`, `logo.svg`, and `setupTests.js`. Once you delete these files, delete all the contents of `App.css` and you will see an error on the React app. Don’t worry; just remove the logo imports in `App.js` and empty the div so that your `App.js` looks like this:
+
 ```javascript
 import './App.css';
 function App() {
-  return (
-    <div className="app">
-
-    </div>
-  );
+  return <div className="app"></div>;
 }
 export default App;
 ```
+
 ## Integrating Firebase into our React app
+
 Go to your Firebase Console dashboard, click on **Project Settings**, scroll down, and you should see something like this:
 
-![Project Settings No App Firebase](./images/project-settings-no-app-firebase.png)
-Click on the third icon to configure our Firebase project for the web. Enter the app name and click on **Continue**. Go back to the project settings and you should now see a config like this:
+![Project Settings No App Firebase](./images/project-settings-no-app-firebase.png) Click on the third icon to configure our Firebase project for the web. Enter the app name and click on **Continue**. Go back to the project settings and you should now see a config like this:
 
-![Web Config Firebase Console](./images/web-config-firebase-console.png)
-Copy the config. Create a new file in the `src` folder named `firebase.js`. Let’s first import `firebase` modules, since Firebase uses modular usage in v9:
+![Web Config Firebase Console](./images/web-config-firebase-console.png) Copy the config. Create a new file in the `src` folder named `firebase.js`. Let’s first import `firebase` modules, since Firebase uses modular usage in v9:
 
 ```javascript
 import { initializeApp } from "firebase/app";
@@ -104,28 +104,32 @@ import { initializeApp } from "firebase/app";
 ​​  addDoc,
 ​​} from "firebase/firestore";
 ```
+
 Now paste in the config we just copied. Let’s initialize our app and services so that we can use Firebase throughout our app:
+
 ```javascript
 const app = ​​initializeApp(firebaseConfig);
 ​​const auth = getAuth(app);
 ​​const db = getFirestore(app);
 ```
+
 This will use our config to recognize the project and initialize authentication and database modules.
 
 We will be creating all important authentication-related functions in `firebase.js` itself. So first look at the Google Authentication function:
+
 ```javascript
 const googleProvider = new GoogleAuthProvider();
 const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
-    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const q = query(collection(db, 'users'), where('uid', '==', user.uid));
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
-      await addDoc(collection(db, "users"), {
+      await addDoc(collection(db, 'users'), {
         uid: user.uid,
         name: user.displayName,
-        authProvider: "google",
+        authProvider: 'google',
         email: user.email,
       });
     }
@@ -135,6 +139,7 @@ const signInWithGoogle = async () => {
   }
 };
 ```
+
 In the above code block, we are using a `try…catch` block along with async functions so that we can handle errors easily and avoid callbacks as much as possible.
 
 First, we are attempting to log in using the `GoogleAuthProvider` Firebase provides us. If the authentication fails, the flow is sent to the `catch` block.
@@ -163,10 +168,10 @@ const registerWithEmailAndPassword = async (name, email, password) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    await addDoc(collection(db, "users"), {
+    await addDoc(collection(db, 'users'), {
       uid: user.uid,
       name,
-      authProvider: "local",
+      authProvider: 'local',
       email,
     });
   } catch (err) {
@@ -175,14 +180,16 @@ const registerWithEmailAndPassword = async (name, email, password) => {
   }
 };
 ```
+
 Since we know that the user is new to our app, we create a record for the user without checking if there is one existing in our database. It’s similar to the approach we used in Google Authentication but without checks.
 
 Create a function that will send a password reset link to an email address:
+
 ```javascript
 const sendPasswordReset = async (email) => {
   try {
     await sendPasswordResetEmail(auth, email);
-    alert("Password reset link sent!");
+    alert('Password reset link sent!');
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -205,7 +212,7 @@ Nothing much here, just firing up the `signOut` function from Firebase, and Fire
 Finally we export all the functions, and here’s how your `firebase.js` should finally look:
 
 ```javascript
-import { initializeApp } from "firebase/app";
+import {initializeApp} from 'firebase/app';
 import {
   GoogleAuthProvider,
   getAuth,
@@ -214,7 +221,7 @@ import {
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signOut,
-} from "firebase/auth";
+} from 'firebase/auth';
 import {
   getFirestore,
   query,
@@ -222,15 +229,15 @@ import {
   collection,
   where,
   addDoc,
-} from "firebase/firestore";
+} from 'firebase/firestore';
 const firebaseConfig = {
-  apiKey: "AIzaSyDIXJ5YT7hoNbBFqK3TBcV41-TzIO-7n7w",
-  authDomain: "fir-auth-6edd8.firebaseapp.com",
-  projectId: "fir-auth-6edd8",
-  storageBucket: "fir-auth-6edd8.appspot.com",
-  messagingSenderId: "904760319835",
-  appId: "1:904760319835:web:44fd0d957f114b4e51447e",
-  measurementId: "G-Q4TYKH9GG7",
+  apiKey: 'AIzaSyDIXJ5YT7hoNbBFqK3TBcV41-TzIO-7n7w',
+  authDomain: 'fir-auth-6edd8.firebaseapp.com',
+  projectId: 'fir-auth-6edd8',
+  storageBucket: 'fir-auth-6edd8.appspot.com',
+  messagingSenderId: '904760319835',
+  appId: '1:904760319835:web:44fd0d957f114b4e51447e',
+  measurementId: 'G-Q4TYKH9GG7',
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -240,13 +247,13 @@ const signInWithGoogle = async () => {
   try {
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;
-    const q = query(collection(db, "users"), where("uid", "==", user.uid));
+    const q = query(collection(db, 'users'), where('uid', '==', user.uid));
     const docs = await getDocs(q);
     if (docs.docs.length === 0) {
-      await addDoc(collection(db, "users"), {
+      await addDoc(collection(db, 'users'), {
         uid: user.uid,
         name: user.displayName,
-        authProvider: "google",
+        authProvider: 'google',
         email: user.email,
       });
     }
@@ -267,10 +274,10 @@ const registerWithEmailAndPassword = async (name, email, password) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    await addDoc(collection(db, "users"), {
+    await addDoc(collection(db, 'users'), {
       uid: user.uid,
       name,
-      authProvider: "local",
+      authProvider: 'local',
       email,
     });
   } catch (err) {
@@ -281,7 +288,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
 const sendPasswordReset = async (email) => {
   try {
     await sendPasswordResetEmail(auth, email);
-    alert("Password reset link sent!");
+    alert('Password reset link sent!');
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -300,17 +307,21 @@ export {
   logout,
 };
 ```
+
 Next, let’s work on the actual functionality.
 
 ## Creating the login page
+
 Create two new files to create a new component, `Login.js` and `Login.css`. I highly recommend installing ES7 snippets in Visual Studio Code so that you can just start typing `rfce` and press Enter to create a component boilerplate.
 
 Now, let’s assign this component to a route. To do that, we need to configure React Router. Go to `App.js` and import the following:
 
 ```javascript
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 ```
+
 Then, in the JSX part of App.js, add the following configuration to enable routing for our app:
+
 ```javascript
 <div className="app">
   <Router>
@@ -320,9 +331,11 @@ Then, in the JSX part of App.js, add the following configuration to enable routi
   </Router>
 </div>
 ```
+
 Remember to import the `Login` component on the top!
 
 Go to `Login.css` and add the following styles. We won’t be focusing on styling much, so here are the styles for you to use:
+
 ```css
 .login {
   height: 100vh;
@@ -358,17 +371,18 @@ Go to `Login.css` and add the following styles. We won’t be focusing on stylin
   margin-top: 7px;
 }
 ```
+
 Go to `Login.js`, and let’s look at how our login functionality works:
 
 ```javascript
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { auth, signInWithEmailAndPassword, signInWithGoogle } from "./firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import "./Login.css";
+import React, {useEffect, useState} from 'react';
+import {Link, useNavigate} from 'react-router-dom';
+import {auth, signInWithEmailAndPassword, signInWithGoogle} from './firebase';
+import {useAuthState} from 'react-firebase-hooks/auth';
+import './Login.css';
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
   useEffect(() => {
@@ -376,7 +390,7 @@ function Login() {
       // maybe trigger a loading screen
       return;
     }
-    if (user) navigate("/dashboard");
+    if (user) navigate('/dashboard');
   }, [user, loading]);
   return (
     <div className="login">
@@ -397,8 +411,7 @@ function Login() {
         />
         <button
           className="login__btn"
-          onClick={() => signInWithEmailAndPassword(email, password)}
-        >
+          onClick={() => signInWithEmailAndPassword(email, password)}>
           Login
         </button>
         <button className="login__btn login__google" onClick={signInWithGoogle}>
@@ -416,14 +429,15 @@ function Login() {
 }
 export default Login;
 ```
+
 The above code might look long and hard to understand, but it’s really not. We have already covered the main authentication parts and now we are just implementing them in our layouts.
 
 Here’s what’s happening in the above code block. We are using the functions we made in `firebase.js` for authentication. We are also using `react-firebase-hooks` along with `useEffect` to track the authentication state of the user. So, if the user gets authenticated, the user will automatically get redirected to the dashboard, which we are yet to make.
 
 Here’s what you’ll see on your screen:
 
-![Basic Login Page React Firebase](./images/basic-login-page-react-firebase.png)
-Create a new component called `Register` to handle user registrations. Here are the styles for `Register.css`:
+![Basic Login Page React Firebase](./images/basic-login-page-react-firebase.png) Create a new component called `Register` to handle user registrations. Here are the styles for `Register.css`:
+
 ```css
 .register {
   height: 100vh;
@@ -459,30 +473,28 @@ Create a new component called `Register` to handle user registrations. Here are 
   margin-top: 7px;
 }
 ```
+
 After that, let’s look at how the register functionality is implemented in the layout. Use this layout in `Register.js`:
+
 ```javascript
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useHistory } from "react-router-dom";
-import {
-  auth,
-  registerWithEmailAndPassword,
-  signInWithGoogle,
-} from "./firebase";
-import "./Register.css";
+import React, {useEffect, useState} from 'react';
+import {useAuthState} from 'react-firebase-hooks/auth';
+import {Link, useHistory} from 'react-router-dom';
+import {auth, registerWithEmailAndPassword, signInWithGoogle} from './firebase';
+import './Register.css';
 function Register() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const [user, loading, error] = useAuthState(auth);
   const history = useHistory();
   const register = () => {
-    if (!name) alert("Please enter name");
+    if (!name) alert('Please enter name');
     registerWithEmailAndPassword(name, email, password);
   };
   useEffect(() => {
     if (loading) return;
-    if (user) history.replace("/dashboard");
+    if (user) history.replace('/dashboard');
   }, [user, loading]);
   return (
     <div className="register">
@@ -513,8 +525,7 @@ function Register() {
         </button>
         <button
           className="register__btn register__google"
-          onClick={signInWithGoogle}
-        >
+          onClick={signInWithGoogle}>
           Register with Google
         </button>
         <div>
@@ -526,9 +537,11 @@ function Register() {
 }
 export default Register;
 ```
+
 Here, we are using similar approach as we used in the `Login` component. We are just using the functions we previously created in `firebase.js`. Again, here we are using `useEffect` along with `react-firebase-hooks` to keep track of user authentication status.
 
 Let’s look at resetting passwords. Create a new component called `Reset`, and here’s the styling for `Reset.css`:
+
 ```css
 .reset {
   height: 100vh;
@@ -561,21 +574,23 @@ Let’s look at resetting passwords. Create a new component called `Reset`, and 
   margin-top: 7px;
 }
 ```
+
 This is the layout for `Reset.js`:
+
 ```javascript
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { auth, sendPasswordResetEmail } from "./firebase";
-import "./Reset.css";
+import React, {useEffect, useState} from 'react';
+import {useAuthState} from 'react-firebase-hooks/auth';
+import {useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import {auth, sendPasswordResetEmail} from './firebase';
+import './Reset.css';
 function Reset() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
   useEffect(() => {
     if (loading) return;
-    if (user) navigate("/dashboard");
+    if (user) navigate('/dashboard');
   }, [user, loading]);
   return (
     <div className="reset">
@@ -589,8 +604,7 @@ function Reset() {
         />
         <button
           className="reset__btn"
-          onClick={() => sendPasswordResetEmail(email)}
-        >
+          onClick={() => sendPasswordResetEmail(email)}>
           Send password reset email
         </button>
         <div>
@@ -602,9 +616,11 @@ function Reset() {
 }
 export default Reset;
 ```
+
 This is similar to what we did for the `Login` and `Register` components. We are simply using the functions we created earlier.
 
 Now, let’s focus on the dashboard. Create a new component called `Dashboard`, and here’s the styling for `Dashboard.css`:
+
 ```css
 .dashboard {
   height: 100vh;
@@ -632,49 +648,52 @@ Now, let’s focus on the dashboard. Create a new component called `Dashboard`, 
   margin-top: 7px;
 }
 ```
+
 And here’s the layout for `Dashboard.js`:
+
 ```javascript
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
-import "./Dashboard.css";
-import { auth, db, logout } from "./firebase";
-import { query, collection, getDocs, where } from "firebase/firestore";
+import React, {useEffect, useState} from 'react';
+import {useAuthState} from 'react-firebase-hooks/auth';
+import {useNavigate} from 'react-router-dom';
+import './Dashboard.css';
+import {auth, db, logout} from './firebase';
+import {query, collection, getDocs, where} from 'firebase/firestore';
 function Dashboard() {
   const [user, loading, error] = useAuthState(auth);
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const navigate = useNavigate();
   const fetchUserName = async () => {
     try {
-      const q = query(collection(db, "users"), where("uid", "==", user?.uid));
+      const q = query(collection(db, 'users'), where('uid', '==', user?.uid));
       const doc = await getDocs(q);
       const data = doc.docs[0].data();
       setName(data.name);
     } catch (err) {
       console.error(err);
-      alert("An error occured while fetching user data");
+      alert('An error occured while fetching user data');
     }
   };
   useEffect(() => {
     if (loading) return;
-    if (!user) return navigate("/");
+    if (!user) return navigate('/');
     fetchUserName();
   }, [user, loading]);
   return (
     <div className="dashboard">
-       <div className="dashboard__container">
+      <div className="dashboard__container">
         Logged in as
-         <div>{name}</div>
-         <div>{user?.email}</div>
-         <button className="dashboard__btn" onClick={logout}>
+        <div>{name}</div>
+        <div>{user?.email}</div>
+        <button className="dashboard__btn" onClick={logout}>
           Logout
-         </button>
-       </div>
-     </div>
+        </button>
+      </div>
+    </div>
   );
 }
 export default Dashboard;
 ```
+
 Unlike the other components, there’s something else we are doing here. We are checking the authentication state. If the user is not authenticated, we redirect the user to the login page.
 
 We are also fetching our database and retrieving the name of the user based on the `uid` of the user. Finally, we are rendering out everything on the screen.
@@ -682,12 +701,12 @@ We are also fetching our database and retrieving the name of the user based on t
 Lastly, let’s add everything to the router. Your `App.js` should look like this:
 
 ```javascript
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./Login";
-import Register from "./Register";
-import Reset from "./Reset";
-import Dashboard from "./Dashboard";
+import './App.css';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
+import Reset from './Reset';
+import Dashboard from './Dashboard';
 function App() {
   return (
     <div className="app">
@@ -704,7 +723,9 @@ function App() {
 }
 export default App;
 ```
+
 The app is fully functional!
 
 ## What's next?
+
 Once you’re done with this build, I want you to play around with this. Try adding Facebook authentication next. What about GitHub authentication? I’d say keep experimenting with the code because that’s how you practice and learn things. If you just keep copying the code, you won’t understand the fundamentals of Firebase.

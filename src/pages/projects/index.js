@@ -113,7 +113,7 @@ function Projects() {
               style={{display: showProjectItem ? 'none' : 'flex'}}>
               {projects.map((project) => (
                 <div
-                  id={project.title}
+                  id={project.slug.replace('#', '')}
                   key={project.title + '-card'}
                   className="col col--4 margin-bottom--lg">
                   <div className={styles.projectCard}>
@@ -168,6 +168,7 @@ function Projects() {
               ))}
             </div>
             <div
+              id={projectItem.slug.replace('#', '')}
               className={clsx(
                 'text--center margin-bottom--xl',
                 styles.projectItem,
@@ -260,7 +261,7 @@ function Projects() {
               <div className="pagination-nav__item pagination-nav__item--next">
                 <Link
                   className="pagination-nav__link"
-                  href={useBaseUrl('about/')}>
+                  to={useBaseUrl('/#about')}>
                   <div className="pagination-nav__sublabel">Learn more</div>
                   <div className="pagination-nav__label">About me</div>
                 </Link>

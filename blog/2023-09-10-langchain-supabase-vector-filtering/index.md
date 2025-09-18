@@ -10,6 +10,8 @@ Supabase, acclaimed as an open-source alternative to Firebase, offers a comprehe
 
 Here's the workflow: Whenever a user uploads a document, we store its vector representation in Supabase. This vector acts as a unique fingerprint of the document's content. Later, when a query is raised, Supabase springs into action, searching for vectors that closely match the query. This search process efficiently retrieves the most relevant documents.
 
+<!-- truncate -->
+
 An added layer of personalization ensures that users interact only with their content. We implement a filter to display documents created by the user, providing a tailored and secure user experience. This approach not only streamlines the search for relevant information but also maintains user data privacy and relevance.
 
 If you want to see the final product, check out the [demo](https://markai.umutyildirim.com/). The source code is available on [GitHub](https://github.com/umuthopeyildirim/markai). We will build this application from scratch in another tutorial. However, for now, let's focus on the Supabase vector filtering.
@@ -359,7 +361,6 @@ Now step by step analyze the code using pseudo code;
 4. **Define Assistant Template:** Set `TEMPLATE` as a prompt for the AI assistant.
 
 5. **POST Function:**
-
    - **Initialize:** Define an asynchronous `POST` function for handling HTTP POST requests.
    - **Parse Request Body:** Extract `brand_id` and `messages` from the request body.
    - **Validate Brand ID:** Return an error response if `brand_id` is missing or invalid.
