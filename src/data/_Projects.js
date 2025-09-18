@@ -1,7 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line header/header
-import React from 'react';
-
 const projects = [
   {
     category: 'AI',

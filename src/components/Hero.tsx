@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Hero.module.css';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';

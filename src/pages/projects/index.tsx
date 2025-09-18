@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {useLocation} from '@docusaurus/router';
 import clsx from 'clsx';
 
@@ -6,6 +6,7 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import type {Config} from '@docusaurus/types';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
@@ -57,12 +58,12 @@ function CategoryIcon({category, size = '1x'}) {
       faIcon = faFile;
   }
 
-  return <FontAwesomeIcon alt={category} size={size} icon={faIcon} />;
+  return <FontAwesomeIcon size={size as any} icon={faIcon} />;
 }
 
 function Projects() {
   const context = useDocusaurusContext();
-  const {siteConfig = {}} = context;
+  const {siteConfig = {} as Config} = context;
 
   const mainRef = useRef(null);
   const [showProjectItem, setShowProjectItem] = useState(false);
@@ -143,12 +144,11 @@ function Projects() {
                           </h4>
                           <p className="avatar__subtitle">{project.subtitle}</p>
                           <small className="avatar__subtitle">
-                            <FontAwesomeIcon alt="Code" icon={faCalendar} />{' '}
+                            <FontAwesomeIcon icon={faCalendar} />{' '}
                             {project.period}
                           </small>
                           <small className="avatar__subtitle">
-                            <FontAwesomeIcon alt="Code" icon={faCode} />{' '}
-                            {project.tech}
+                            <FontAwesomeIcon icon={faCode} /> {project.tech}
                           </small>
                         </div>
                       </div>
@@ -197,16 +197,14 @@ function Projects() {
                     {projectItem.category}
                   </li>
                   <li>
-                    <FontAwesomeIcon alt="Calendar" icon={faCalendar} />{' '}
-                    {projectItem.period}
+                    <FontAwesomeIcon icon={faCalendar} /> {projectItem.period}
                   </li>
                   <li>
-                    <FontAwesomeIcon alt="Code" icon={faCode} />{' '}
-                    {projectItem.tech}
+                    <FontAwesomeIcon icon={faCode} /> {projectItem.tech}
                   </li>
                   {projectItem.team && (
                     <li>
-                      <FontAwesomeIcon alt="Team" icon={faUsers} />{' '}
+                      <FontAwesomeIcon icon={faUsers} />{' '}
                       {projectItem.team.map((member, i) => (
                         <span key={i}>
                           {member.link && (
@@ -228,8 +226,7 @@ function Projects() {
                       {projectItem.links.map((link, i) => (
                         <li key={i}>
                           <a target="_blank" href={link.link}>
-                            <FontAwesomeIcon alt="Link" icon={faLink} />{' '}
-                            {link.name}
+                            <FontAwesomeIcon icon={faLink} /> {link.name}
                           </a>
                         </li>
                       ))}

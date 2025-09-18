@@ -6,9 +6,13 @@
  *
  * @format
  */
-require('dotenv').config();
 
-const config = {
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const config: Config = {
   title: 'Umut Hope YILDIRIM',
   tagline: 'My Portfolio Website',
   url: 'https://umutyildirim.com/',
@@ -97,8 +101,7 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -130,7 +133,7 @@ const config = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {},
-      }),
+      } satisfies Preset.Options,
     ],
     [
       '@docusaurus/plugin-sitemap',
@@ -142,7 +145,6 @@ const config = {
       },
     ],
   ],
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
     image: 'img/umutyildirim.png',
     colorMode: {
@@ -321,7 +323,7 @@ const config = {
       // Please do not remove the credits, help to publicize Docusaurus :)
       copyright: `Copyright © ${new Date().getFullYear()} Umut Hope YILDIRIM. Built with <a href="https://docusaurus.io" target="_blank">Docusaurus🦖</a>`,
     },
-  },
+  } satisfies Preset.ThemeConfig,
 };
 
-module.exports = config;
+export default config;
