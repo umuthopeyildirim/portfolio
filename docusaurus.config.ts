@@ -10,6 +10,7 @@
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 const config: Config = {
